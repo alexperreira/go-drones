@@ -1,0 +1,35 @@
+.App {
+	/* text-align: center; */
+	/* display: flex;
+	flex-direction: column; */
+}
+
+.logo {
+	width: 8rem;
+	height: 100%;
+	pointer-events: none;
+	margin-top: 1rem;
+	/* margin: 2.5rem; */
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	.logo {
+		animation: App-logo-spin infinite 20s linear;
+	}
+}
+
+.header {
+	background-color: transparent;
+	min-height: 15vh;
+	display: flex;
+	/* flex-direction: column; */
+	/* align-items: center; */
+	justify-content: space-between;
+	font-size: calc(10px + 2vmin);
+	color: white;
+	margin: 0 2.5rem;
+}
+
+li {
+	list-style-type: none;
+}
