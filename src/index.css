@@ -6,6 +6,7 @@
 @font-face {
 	font-family: 'Avenir Next Heavy';
 	src: url('assets/fonts/AvenirNextCyr-Heavy.ttf') format('truetype');
+	font-weight: 900;
 }
 
 @font-face {
@@ -21,5 +22,8 @@
 body {
 	margin: 0;
 	font-family: 'Avenir Next Regular';
-	background: #000;
+	background: #010606;
+	/* background: #fff; */
+	overflow-y: scroll;
+	overflow-x: hidden;
 }

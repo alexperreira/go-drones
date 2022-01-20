@@ -1,6 +1,7 @@
 // import dependencies
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
+import { CSSTransition } from 'react-transition-group';
 
 // import pages
 import Home from './components/Pages/Home';
@@ -10,8 +11,15 @@ import Contact from './components/Pages/Contact';
 
 // import components
 // import Header from './components/UI/Header';
-import Sidebar from './components/UI/Sidebar';
+import Sidebar from './components/Sidebar/Sidebar';
 import Footer from './components/UI/Footer';
+
+// const routes = [
+// 	{ path: '/', name: 'Home', Component: Home },
+// 	{ path: '/our-process', name: 'Our Process', Component: Process },
+// 	{ path: '/our-shows', name: 'Our Shows', Component: Shows },
+// 	{ path: '/contact', name: 'Contact', Component: Contact },
+// ];
 
 function App() {
 	return (
