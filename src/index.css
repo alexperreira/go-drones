@@ -1,22 +1,23 @@
 @font-face {
 	font-family: 'Avenir Next Regular';
-	src: url('assets/fonts/AvenirNextCyr-Regular.ttf') format('truetype');
+	src: url('components/assets/fonts/AvenirNextCyr-Regular.ttf')
+		format('truetype');
 }
 
 @font-face {
 	font-family: 'Avenir Next Heavy';
-	src: url('assets/fonts/AvenirNextCyr-Heavy.ttf') format('truetype');
+	src: url('components/assets/fonts/AvenirNextCyr-Heavy.ttf') format('truetype');
 	font-weight: 900;
 }
 
 @font-face {
 	font-family: 'Avenir Next Thin';
-	src: url('assets/fonts/AvenirNextCyr-Thin.ttf') format('truetype');
+	src: url('components/assets/fonts/AvenirNextCyr-Thin.ttf') format('truetype');
 }
 
 @font-face {
 	font-family: 'Avenir Next Light';
-	src: url('assets/fonts/AvenirNextCyr-Light.ttf') format('truetype');
+	src: url('components/assets/fonts/AvenirNextCyr-Light.ttf') format('truetype');
 }
 
 body {

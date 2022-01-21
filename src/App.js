@@ -3,15 +3,15 @@ import './App.css';
 import { Route, Routes } from 'react-router-dom';
 
 // import pages
-import Home from './components/Pages/Home';
-import Process from './components/Pages/Process';
+import Home from './components/Pages/HomePage/Home';
+import Process from './components/Pages/ProcessPage/Process';
 import Shows from './components/Pages/Shows';
 import Contact from './components/Pages/Contact';
 
 // import components
 // import Header from './components/UI/Header';
 import Sidebar from './components/Sidebar/Sidebar';
-import Footer from './components/UI/Footer';
+import Footer from './components/UI/Footer/Footer';
 
 // const routes = [
 // 	{ path: '/', name: 'Home', Component: Home },
