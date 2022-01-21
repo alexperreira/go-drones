@@ -1,7 +1,6 @@
 // import dependencies
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
-import { CSSTransition } from 'react-transition-group';
 
 // import pages
 import Home from './components/Pages/Home';

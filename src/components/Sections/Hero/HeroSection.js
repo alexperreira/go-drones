@@ -1,6 +1,8 @@
 import React from 'react';
+
 import {
 	HeroContainer,
+	Logo,
 	HeroBg,
 	VideoBg,
 	HeroContent,
@@ -10,11 +12,13 @@ import {
 	Go,
 	Slash,
 } from './HeroElements';
+
 import Video from '../../../assets/videos/drone-reel.mp4';
 
 const HeroSection = () => {
 	return (
 		<HeroContainer id='home'>
+			<Logo />
 			<HeroBg>
 				<VideoBg autoPlay loop muted src={Video} type='video/mp4' />
 			</HeroBg>
