@@ -1,4 +1,5 @@
 // import dependencies
+import React, { useState } from 'react';
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
 
@@ -21,9 +22,13 @@ import Footer from './components/UI/Footer/Footer';
 // ];
 
 function App() {
+	const [isOpen, setIsOpen] = useState(false);
+	const toggle = () => {
+		setIsOpen(!isOpen);
+	};
 	return (
 		<div className='App'>
-			<Sidebar />
+			<Sidebar isOpen={isOpen} toggle={toggle} />
 			<Routes>
 				<Route path='/' element={<Home />} />
 				<Route path='our-process' element={<Process />} />
