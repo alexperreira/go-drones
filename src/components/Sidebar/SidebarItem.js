@@ -1,6 +1,24 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+
+const variants = {
+	open: {
+		y: 0,
+		opacity: 1,
+		transition: {
+			y: { stiffness: 1000, velocity: -100 },
+		},
+	},
+	closed: {
+		y: 50,
+		opacity: 0,
+		transition: {
+			y: { stiffness: 1000 },
+		},
+	},
+};
 
 const SidebarLink = styled(Link)`
 	display: flex;
@@ -27,14 +45,14 @@ const SidebarLabel = styled.span`
 
 const SidebarItem = ({ item }) => {
 	return (
-		<>
+		<motion.li variants={variants}>
 			<SidebarLink to={item.path}>
 				<div>
 					{item.icon}
 					<SidebarLabel>{item.title}</SidebarLabel>
 				</div>
 			</SidebarLink>
-		</>
+		</motion.li>
 	);
 };
 

@@ -66,51 +66,62 @@ export const HeroContent = styled.div`
 	z-index: 3;
 	max-width: 1200px;
 	position: absolute;
-	padding: 8px 24px;
-	margin-left: 24px;
-`;
+	padding: 0.5rem 1.5rem;
+	margin-left: 1.5rem;
 
-export const Go = styled.h1`
-	color: #fff;
-	font-size: 10rem;
-	font-family: 'Avenir Next Heavy';
-	text-align: left;
-	text-transform: uppercase;
-	line-height: 8.5rem;
-	margin: 0;
-`;
+	h1 {
+		color: #fff;
+		font-size: 10rem;
+		font-family: 'Avenir Next Heavy';
+		text-align: left;
+		text-transform: uppercase;
+		line-height: 8.5rem;
+		margin: 0;
+	}
 
-export const HeroH1 = styled.h1`
-	color: #fff;
-	font-size: 10rem;
-	font-family: 'Avenir Next Heavy';
-	text-align: left;
-	background-clip: text;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	-webkit-text-stroke: 2px white;
-	text-transform: uppercase;
-	line-height: 8.5rem;
-	margin: 0;
+	h2 {
+		color: #fff;
+		font-size: 10rem;
+		font-family: 'Avenir Next Heavy';
+		text-align: left;
+		text-transform: uppercase;
+		line-height: 8.5rem;
+		margin: 0;
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		-webkit-text-stroke: 2px #fff;
+	}
 `;
 
 export const H2Wrapper = styled.div`
 	display: flex;
-	width: 50%;
+	/* width: 50%; */
 	justify-content: space-around;
+	float: left;
+
+	h2 {
+		color: #fff;
+		text-transform: uppercase;
+		font-family: 'Avenir Next Thin';
+		font-size: 1.5rem;
+		margin-left: 0.5rem;
+	}
 `;
 
-export const HeroH2 = styled.h2`
-	color: #fff;
-	text-transform: uppercase;
-	font-family: 'Avenir Next Thin';
-	font-size: 1.5rem;
-`;
+// export const HeroH2 = styled.h2`
+// 	color: #fff;
+// 	text-transform: uppercase;
+// 	font-family: 'Avenir Next Thin';
+// 	font-size: 1.5rem;
+// `;
 
-export const Slash = styled.h2`
+export const Slash = styled.h3`
+	display: inline-block;
 	color: #2b93d1;
 	margin: auto 1rem;
 	font-size: 1.5rem;
+	font-family: 'Avenir Next Thin';
 `;
 
 // Animations

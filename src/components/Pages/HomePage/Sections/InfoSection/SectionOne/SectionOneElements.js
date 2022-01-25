@@ -29,29 +29,35 @@ export const BgOverlay = styled.div`
 export const TextGroup = styled.div`
 	align-self: center;
 	width: 1000px;
-`;
 
-export const White = styled.h2`
-	color: #fff;
-	font-family: 'Avenir Next Heavy';
-	font-size: 4rem;
-	text-align: right;
-	text-transform: uppercase;
-	margin: 0;
-	word-wrap: nowrap;
-`;
+	h1 {
+		color: #fff;
+		font-family: 'Avenir Next Heavy';
+		font-size: 4rem;
+		text-align: right;
+		text-transform: uppercase;
+		margin: 0;
+		word-wrap: nowrap;
+	}
 
-export const InfoH2 = styled.h2`
-	font-size: 4rem;
-	font-family: 'Avenir Next Heavy';
-	background-clip: text;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	-webkit-text-stroke: 2px #fff;
-	text-transform: uppercase;
-	text-align: right;
-	margin: 0;
-	/* text-align: right; */
+	h2 {
+		font-size: 4rem;
+		font-family: 'Avenir Next Heavy';
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		-webkit-text-stroke: 2px #fff;
+		text-transform: uppercase;
+		text-align: right;
+		margin: 0;
+		/* text-align: right; */
+	}
+
+	p {
+		font-family: 'Avenir Next Regular';
+		font-size: 3.5rem;
+		color: #fff;
+	}
 `;
 
 export const InfoP = styled.p`

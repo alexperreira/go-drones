@@ -26,8 +26,13 @@ const MenuIcon = ({ isOpen, toggle }) => {
 					</filter>
 				</defs>
 			</svg>
+			{/* <div
+				className={`plate plate2 ${classActive ? 'active' : ''}`}
+				onClick={toggle}
+			> */}
 			<div
 				className={`plate plate2 ${isOpen ? 'active' : ''}`}
+				isOpen={isOpen}
 				onClick={toggle}
 			>
 				<svg

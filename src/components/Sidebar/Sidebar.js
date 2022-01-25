@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import styled from 'styled-components';
-import * as FaIcons from 'react-icons/fa';
+// import * as FaIcons from 'react-icons/fa';
 import * as AiIcons from 'react-icons/ai';
 import SidebarItem from './SidebarItem';
 // import Logo from '../../assets/images/gologo.png';
@@ -27,79 +27,45 @@ const menuData = [
 	},
 ];
 
-const Nav = styled.div`
-	background-color: transparent;
-	position: absolute;
-	right: 0;
-	display: flex;
-	flex-direction: column;
-	align-items: flex-end;
-	justify-content: space-between;
-	font-size: calc(10px + 2vmin);
-	color: white;
-	margin: 0 2.5rem;
-	z-index: 10;
-`;
-
-const NavIcon = styled(Link)`
-	margin-left: 2rem;
-	font-size: 2rem;
-	height: 80px;
-	display: flex;
-	/* justify-content: flex-start; */
-	align-items: center;
-`;
-
-const iconStyle = {
-	color: '#2b93d1',
-	fontSize: '1rem',
+const variants = {
+	open: {
+		transition: { staggerChildren: 0.07, delayChildren: 0.2 },
+	},
+	closed: {
+		transition: { staggerChildren: 0.05, staggerDirection: -1 },
+	},
 };
 
-const SidebarNav = styled.aside`
-	position: fixed;
-	z-index: 999;
-	background: #15171c;
-	width: 400px;
-	height: 100vh;
-	display: flex;
-	justify-content: center;
-	top: 0;
-	left: ${({ sidebar }) => (sidebar ? '0' : '-100%')};
-	transition: 350ms;
-`;
-
-const SidebarWrapper = styled.div`
-	width: 100%;
-`;
-
-const Sidebar = ({ isOpen, toggle }) => {
+const Sidebar = () => {
+	const [isOpen, setIsOpen] = useState(false);
+	const toggle = () => {
+		setIsOpen(!isOpen);
+	};
 	return (
 		<>
-			<Nav>
-				<NavIcon to='#'>
-					{/* <FaIcons.FaBars onClick={toggle} style={iconStyle} /> */}
-					{/* <div class='plate plate2' onclick="this.classList.toggle('active')"> */}
-					<MenuIcon onClick={toggle} />
-				</NavIcon>
-			</Nav>
-			<SidebarNav isOpen={isOpen} onClick={toggle}>
-				<SidebarWrapper>
-					<NavIcon to='#'>
-						<AiIcons.AiOutlineClose onClick={sidebar} style={iconStyle} />
-					</NavIcon>
-					{menuData.map((item, index) => {
-						return (
-							<SidebarItem
-								item={item}
-								key={index}
-								// onClick={toggle}
-								// onBlur={hide}
-								// onFocus={show}
-							/>
-						);
-					})}
-				</SidebarWrapper>
-			</SidebarNav>
+			<nav className={styles.nav}>
+				<Link className={styles.navIcon} to='#' onClick={toggle}>
+					<MenuIcon isOpen={isOpen} toggle={toggle} />
+				</Link>
+			</nav>
+			{/* <SidebarNav isOpen={isOpen} onClick={toggle}> */}
+			<motion.aside
+				className={`${styles.sidebar} ${isOpen ? styles.active : ''}`}
+				animate={isOpen ? 'open' : 'closed'}
+				isOpen={isOpen}
+				onClick={toggle}
+			>
+				<div className={styles.wrapper}>
+					<Link className={styles.navIcon} to='#' onClick={toggle}>
+						<AiIcons.AiOutlineClose className={styles.icon} />
+					</Link>
+					<motion.ul variants={variants}>
+						{menuData.map((item, index) => {
+							return <SidebarItem item={item} key={index} />;
+						})}
+					</motion.ul>
+				</div>
+			</motion.aside>
 		</>
 	);
 };
