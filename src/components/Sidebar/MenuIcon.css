@@ -1,3 +1,13 @@
+.logo {
+	width: auto;
+	height: 100px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: 2rem;
+	z-index: 2;
+}
+
 svg {
 	height: 80px;
 	position: absolute;

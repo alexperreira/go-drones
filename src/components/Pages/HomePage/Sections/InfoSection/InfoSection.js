@@ -1,11 +1,14 @@
 import React from 'react';
+import styled from 'styled-components';
 import SectionOne from './SectionOne/SectionOne';
 import SectionTwo from './SectionTwo/SectionTwo';
 import SectionThree from './SectionThree/SectionThree';
 import LogoSection from './LogoSection/LogoSection';
 import CallToAction from './CallToAction/CallToAction';
 
-import { InfoContainer } from './InfoElements';
+const InfoContainer = styled.section`
+	height: 100%;
+`;
 
 const InfoSection = () => {
 	return (

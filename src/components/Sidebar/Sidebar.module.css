@@ -1,6 +1,6 @@
 .nav {
 	background-color: transparent;
-	position: absolute;
+	position: fixed;
 	right: 0;
 	display: flex;
 	flex-direction: column;
@@ -9,7 +9,23 @@
 	font-size: calc(10px + 2vmin);
 	color: #fff;
 	margin: 0 2.5rem;
+	/* padding: 0 calc((100vw - 1300px) / 2); */
 	z-index: 10;
+}
+
+.logo {
+	width: auto;
+	height: 100px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	margin: 2rem;
+	z-index: 20;
+}
+
+.logo.active {
+	left: 400px;
+	transition: 350ms;
 }
 
 .navIcon {
@@ -46,4 +62,9 @@
 
 .wrapper {
 	width: 100%;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
 }

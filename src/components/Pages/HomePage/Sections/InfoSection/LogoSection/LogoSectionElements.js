@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 import EDC from '../../../../../assets/images/EDC.png';
 import LV from '../../../../../assets/images/LV.png';
@@ -7,6 +8,23 @@ import Basel from '../../../../../assets/images/ART BASEL.png';
 import ICCU from '../../../../../assets/images/ICCU.png';
 
 import bg from '../../../../../assets/images/section5-bg.png';
+
+const variants = {
+	open: {
+		y: 0,
+		opacity: 1,
+		transition: {
+			y: { stiffness: 1000, velocity: -100 },
+		},
+	},
+	closed: {
+		y: 50,
+		opacity: 0,
+		transition: {
+			y: { stiffness: 1000 },
+		},
+	},
+};
 
 export const Section = styled.div`
 	width: 100%;
@@ -36,31 +54,31 @@ export const BgOverlay = styled.div`
 export const TextGroup = styled.div`
 	align-self: center;
 	width: 1000px;
+
+	h1 {
+		color: #fff;
+		font-family: 'Avenir Next Heavy';
+		font-size: 5rem;
+		text-transform: uppercase;
+		margin: 0;
+		word-wrap: nowrap;
+		text-align: left;
+	}
+
+	h2 {
+		font-family: 'Avenir Next Heavy';
+		font-size: 5rem;
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		-webkit-text-stroke: 2px #fff;
+		text-transform: uppercase;
+		margin: 0;
+		text-align: right;
+	}
 `;
 
-export const WhiteH1 = styled.h2`
-	color: #fff;
-	font-family: 'Avenir Next Heavy';
-	font-size: 5rem;
-	text-transform: uppercase;
-	margin: 0;
-	word-wrap: nowrap;
-	text-align: left;
-`;
-
-export const InfoH1 = styled.h1`
-	font-family: 'Avenir Next Heavy';
-	font-size: 5rem;
-	background-clip: text;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	-webkit-text-stroke: 2px #fff;
-	text-transform: uppercase;
-	margin: 0;
-	text-align: right;
-`;
-
-export const LogoGroup = styled.div`
+export const LogoGroup = styled(motion.div)`
 	display: flex;
 	justify-content: space-around;
 `;

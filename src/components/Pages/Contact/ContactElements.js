@@ -1,8 +1,15 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
+import bg from '../../assets/images/section2-bg.png';
+
+export const Section = styled.div`
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+`;
 
 export const HeroContainer = styled.div`
-	background: #0c0c0c;
+	background: url(${bg});
 	display: flex;
 	justify-content: left;
 	align-items: center;
@@ -30,35 +37,19 @@ export const HeroContainer = styled.div`
 	}
 `;
 
-export const HeroBg = styled.div`
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	overflow: hidden;
-`;
-
-export const VideoBg = styled.video`
-	width: 100%;
-	height: 100%;
-	-o-object-fit: cover;
-	object-fit: cover;
-	background: #232342;
-`;
-
 export const HeroContent = styled.div`
 	z-index: 3;
 	max-width: 1200px;
-	position: absolute;
+	display: flex;
+	flex-direction: column;
 	padding: 0.5rem 1.5rem;
 	margin-left: 1.5rem;
+	align-content: center;
+	justify-content: center;
 
 	h1 {
 		color: #fff;
-		font-size: 10rem;
+		font-size: 8rem;
 		font-family: 'Avenir Next Heavy';
 		text-align: left;
 		text-transform: uppercase;
@@ -68,7 +59,7 @@ export const HeroContent = styled.div`
 
 	h2 {
 		color: #fff;
-		font-size: 10rem;
+		font-size: 8rem;
 		font-family: 'Avenir Next Heavy';
 		text-align: left;
 		text-transform: uppercase;
@@ -81,37 +72,41 @@ export const HeroContent = styled.div`
 	}
 `;
 
-export const H2Wrapper = styled.div`
-	display: flex;
-	/* width: 50%; */
-	justify-content: space-around;
-	float: left;
+export const Div = styled(motion.div)`
+	align-self: center;
+	width: 1000px;
+	z-index: 5;
+
+	h1 {
+		color: #fff;
+		font-family: 'Avenir Next Heavy';
+		font-size: 3.5rem;
+		text-transform: uppercase;
+		margin: 0;
+		word-wrap: nowrap;
+	}
 
 	h2 {
-		color: #fff;
+		font-size: 3.5rem;
+		font-family: 'Avenir Next Heavy';
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		-webkit-text-stroke: 2px #fff;
 		text-transform: uppercase;
-		font-family: 'Avenir Next Thin';
-		font-size: 1.5rem;
-		margin-left: 0.5rem;
+		margin: 0;
+		text-align: right;
+	}
+
+	p {
+		font-family: 'Avenir Next Regular';
+		font-size: 3rem;
+		color: #fff;
+	}
+
+	span {
+		font-family: 'Avenir Next Heavy';
+		font-size: inherit;
+		color: #fff;
 	}
 `;
-
-// export const HeroH2 = styled.h2`
-// 	color: #fff;
-// 	text-transform: uppercase;
-// 	font-family: 'Avenir Next Thin';
-// 	font-size: 1.5rem;
-// `;
-
-export const Slash = styled(motion.h3)`
-	display: inline-block;
-	color: #2b93d1;
-	margin: auto 1rem;
-	font-size: 1.5rem;
-	font-family: 'Avenir Next Thin';
-`;
-
-// Animations
-export const duration = 300;
-
-// export const

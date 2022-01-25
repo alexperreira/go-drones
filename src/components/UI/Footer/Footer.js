@@ -4,8 +4,6 @@ import { FaFacebookF as Facebook } from 'react-icons/fa';
 import { FaInstagram as Instagram } from 'react-icons/fa';
 import { ImYoutube2 as Youtube } from 'react-icons/im';
 
-const style = { color: '#404040', fontSize: '2rem' };
-
 const Footer = () => {
 	return (
 		<Section>
@@ -16,21 +14,21 @@ const Footer = () => {
 					rel='noreferrer'
 					href='https://www.facebook.com/GO-Drones-102153468981541'
 				>
-					<Facebook style={style}></Facebook>
+					<Facebook />
 				</a>
 				<a
 					target='_blank'
 					rel='noreferrer'
 					href='https://www.instagram.com/godroneshows/'
 				>
-					<Instagram style={style} />
+					<Instagram />
 				</a>
 				<a
 					target='_blank'
 					rel='noreferrer'
 					href='https://www.youtube.com/channel/UCeGORppuLG9fSvj-VYLIAFw'
 				>
-					<Youtube style={style} />
+					<Youtube />
 				</a>
 			</IconGroup>
 			<Copyright>

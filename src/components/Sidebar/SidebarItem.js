@@ -21,7 +21,7 @@ const variants = {
 };
 
 const SidebarLink = styled(Link)`
-	display: flex;
+	display: block;
 	color: #e1e9fc;
 	text-decoration: none;
 	justify-content: space-between;
@@ -37,10 +37,10 @@ const SidebarLink = styled(Link)`
 		border-left: 4px solid #2b93d1;
 		cursor: pointer;
 	}
-`;
 
-const SidebarLabel = styled.span`
-	margin-left: 16px;
+	div {
+		font-family: 'Avenir Next Heavy';
+	}
 `;
 
 const SidebarItem = ({ item }) => {
@@ -48,8 +48,8 @@ const SidebarItem = ({ item }) => {
 		<motion.li variants={variants}>
 			<SidebarLink to={item.path}>
 				<div>
-					{item.icon}
-					<SidebarLabel>{item.title}</SidebarLabel>
+					{/* {item.icon} */}
+					<span>{item.title}</span>
 				</div>
 			</SidebarLink>
 		</motion.li>

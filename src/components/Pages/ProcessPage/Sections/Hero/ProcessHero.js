@@ -6,13 +6,22 @@ import {
 	HeroBg,
 	VideoBg,
 	HeroContent,
-	HeroH1,
-	Go,
 } from './ProcessHeroElements';
 
 import Video from '../../../../assets/videos/drone-process-reel.mp4';
+import { motion } from 'framer-motion';
 
 const ProcessHero = () => {
+	const fadeLeft = {
+		hidden: { opacity: 0, x: -100 },
+		visible: { opacity: 1, x: 0 },
+	};
+
+	const fadeRight = {
+		hidden: { opacity: 0, x: 100 },
+		visible: { opacity: 1, x: 0 },
+	};
+
 	return (
 		<HeroContainer id='home'>
 			<Logo />
@@ -20,8 +29,22 @@ const ProcessHero = () => {
 				<VideoBg autoPlay loop muted src={Video} type='video/mp4' />
 			</HeroBg>
 			<HeroContent>
-				<Go>How</Go>
-				<HeroH1>We do it</HeroH1>
+				<motion.h1
+					variants={fadeLeft}
+					initial='hidden'
+					animate='visible'
+					transition={{ duration: 0.2, delay: 1 }}
+				>
+					How
+				</motion.h1>
+				<motion.h2
+					variants={fadeRight}
+					initial='hidden'
+					animate='visible'
+					transition={{ duration: 0.2, delay: 1.2 }}
+				>
+					We do it
+				</motion.h2>
 			</HeroContent>
 		</HeroContainer>
 	);

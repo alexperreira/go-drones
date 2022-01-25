@@ -7,6 +7,7 @@ import SidebarItem from './SidebarItem';
 // import Logo from '../../assets/images/gologo.png';
 import styles from './Sidebar.module.css';
 import MenuIcon from './MenuIcon';
+import goLogo from '../assets/images/gologo.png';
 
 const menuData = [
 	{
@@ -49,10 +50,22 @@ const Sidebar = () => {
 				</Link>
 			</nav>
 			{/* <SidebarNav isOpen={isOpen} onClick={toggle}> */}
+			<Link
+				to='/'
+				onClick={() => {
+					window.scrollTo({ top: 0, behavior: 'smooth' });
+				}}
+			>
+				<img
+					src={goLogo}
+					alt=''
+					className={`${styles.logo} ${isOpen ? styles.active : ''}`}
+				/>
+			</Link>
 			<motion.aside
 				className={`${styles.sidebar} ${isOpen ? styles.active : ''}`}
 				animate={isOpen ? 'open' : 'closed'}
-				isOpen={isOpen}
+				isopen={isOpen.toString()}
 				onClick={toggle}
 			>
 				<div className={styles.wrapper}>

@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 
 import {
 	HeroContainer,
-	Logo,
 	HeroBg,
 	VideoBg,
 	HeroContent,
@@ -24,9 +23,18 @@ const HeroSection = () => {
 		visible: { opacity: 1, x: 0 },
 	};
 
+	const fadeIn = {
+		hidden: { opacity: 0 },
+		visible: { opacity: 1 },
+	};
+
+	const pop = {
+		hidden: { opacity: 0, scale: 1 },
+		visible: { opacity: 1, scale: [1, 1.5, 1] },
+	};
+
 	return (
-		<HeroContainer id='home'>
-			<Logo />
+		<HeroContainer>
 			<HeroBg>
 				<VideoBg autoPlay loop muted src={Video} type='video/mp4' />
 			</HeroBg>
@@ -48,9 +56,46 @@ const HeroSection = () => {
 					Drones
 				</motion.h2>
 				<H2Wrapper>
-					<h2>
-						Elevate <Slash>/</Slash> your <Slash>/</Slash> brand
-					</h2>
+					<motion.h2
+						variants={fadeIn}
+						initial='hidden'
+						animate='visible'
+						transition={{ duration: 0.2, delay: 1.4 }}
+					>
+						Elevate
+					</motion.h2>
+					<Slash
+						variants={pop}
+						initial='hidden'
+						animate='visible'
+						transition={{ duration: 0.5, delay: 1.6 }}
+					>
+						/
+					</Slash>
+					<motion.h2
+						variants={fadeIn}
+						initial='hidden'
+						animate='visible'
+						transition={{ duration: 0.2, delay: 1.5 }}
+					>
+						your
+					</motion.h2>
+					<Slash
+						variants={pop}
+						initial='hidden'
+						animate='visible'
+						transition={{ duration: 0.5, delay: 1.7 }}
+					>
+						/
+					</Slash>
+					<motion.h2
+						variants={fadeIn}
+						initial='hidden'
+						animate='visible'
+						transition={{ duration: 0.2, delay: 1.6 }}
+					>
+						brand
+					</motion.h2>
 				</H2Wrapper>
 			</HeroContent>
 		</HeroContainer>

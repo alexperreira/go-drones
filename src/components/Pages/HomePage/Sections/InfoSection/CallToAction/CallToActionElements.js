@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 import bg from '../../../../../assets/images/section6-bg.png';
 
@@ -31,29 +32,29 @@ export const TextGroup = styled.div`
 	align-self: center;
 	width: 1000px;
 	text-align: center;
+
+	h1 {
+		color: #fff;
+		font-family: 'Avenir Next Heavy';
+		font-size: 5rem;
+		text-transform: uppercase;
+		margin: 0;
+		word-wrap: nowrap;
+	}
+
+	h2 {
+		font-family: 'Avenir Next Heavy';
+		font-size: 5rem;
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		-webkit-text-stroke: 2px #fff;
+		text-transform: uppercase;
+		margin: 0;
+	}
 `;
 
-export const WhiteH1 = styled.h2`
-	color: #fff;
-	font-family: 'Avenir Next Heavy';
-	font-size: 5rem;
-	text-transform: uppercase;
-	margin: 0;
-	word-wrap: nowrap;
-`;
-
-export const InfoH1 = styled.h1`
-	font-family: 'Avenir Next Heavy';
-	font-size: 5rem;
-	background-clip: text;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	-webkit-text-stroke: 2px #fff;
-	text-transform: uppercase;
-	margin: 0;
-`;
-
-export const Button = styled.button`
+export const Button = styled(motion.button)`
 	background: #2b93d1;
 	color: #fff;
 	text-transform: uppercase;

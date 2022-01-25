@@ -5,7 +5,7 @@ import logo from '../../assets/images/gologo.png';
 const Header = () => {
 	return (
 		<div className='header'>
-			<img src={logo} className='logo' alt='' />
+			{/* <img src={logo} className='logo' alt='' /> */}
 			<nav className='headerNav'>
 				<ul>
 					<li>

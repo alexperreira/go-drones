@@ -23,6 +23,17 @@ export const IconGroup = styled.div`
 	display: flex;
 	width: 400px;
 	justify-content: space-around;
+
+	a {
+		color: #404040;
+		font-size: 1.5rem;
+		width: 50px;
+	}
+
+	svg {
+		height: 50px;
+		width: auto;
+	}
 `;
 
 export const Copyright = styled.p`

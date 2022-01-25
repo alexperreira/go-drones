@@ -58,16 +58,16 @@ export const TextGroup = styled.div`
 		font-size: 3.5rem;
 		color: #fff;
 	}
+
+	span {
+		font-family: 'Avenir Next Heavy';
+		font-size: inherit;
+		color: #fff;
+	}
 `;
 
-export const InfoP = styled.p`
-	font-family: 'Avenir Next Regular';
-	font-size: 3.5rem;
-	color: #fff;
-`;
-
-export const Span = styled.span`
-	font-family: 'Avenir Next Heavy';
-	font-size: inherit;
-	color: #fff;
-`;
+// export const Span = styled(motion.span)`
+// 	font-family: 'Avenir Next Heavy';
+// 	font-size: inherit;
+// 	color: #fff;
+// `;
