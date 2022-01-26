@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
+import { devices } from '../../../../../device';
 
 export const HeroContainer = styled.div`
 	background: #0c0c0c;
@@ -79,6 +80,16 @@ export const HeroContent = styled.div`
 		-webkit-text-fill-color: transparent;
 		-webkit-text-stroke: 2px #fff;
 	}
+
+	@media ${devices.tablet} {
+		h1 {
+			font-size: 8rem;
+		}
+
+		h2 {
+			font-size: 8rem;
+		}
+	} ;
 `;
 
 export const H2Wrapper = styled.div`
@@ -110,8 +121,3 @@ export const Slash = styled(motion.h3)`
 	font-size: 1.5rem;
 	font-family: 'Avenir Next Thin';
 `;
-
-// Animations
-export const duration = 300;
-
-// export const

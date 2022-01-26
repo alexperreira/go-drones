@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import goLogo from '../../assets/images/gologo-grey.png';
+import goLogo from '../../assets/images/go-drones-white.png';
 
 export const Section = styled.div`
 	background: #000;

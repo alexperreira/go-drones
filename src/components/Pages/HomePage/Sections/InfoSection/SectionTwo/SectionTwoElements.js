@@ -53,7 +53,7 @@ export const TextGroup = styled.div`
 
 	p {
 		font-family: 'Avenir Next Regular';
-		font-size: 3rem;
+		font-size: 2.5rem;
 		color: #fff;
 	}
 

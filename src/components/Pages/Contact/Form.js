@@ -19,7 +19,26 @@ const Form = () => {
 	};
 
 	const Div = styled.div`
-		margin: auto;
+		margin: 0.5rem auto;
+	`;
+
+	const TopLineDiv = styled.div`
+		display: flex;
+		justify-content: space-evenly;
+
+		input {
+			width: 100%;
+		}
+	`;
+
+	const Input = styled.input`
+		background: transparent;
+		border: 1px solid #808080;
+		margin: 1rem;
+		padding: 0.5rem;
+		height: 2rem;
+		width: auto;
+		color: #808080;
 	`;
 
 	const Form = styled.form`
@@ -29,38 +48,46 @@ const Form = () => {
 		min-width: 100px;
 		min-height: 400px;
 		padding: 1rem 2rem 2rem 2rem;
+		margin-top: 5rem;
 		box-shadow: 0 0.5rem 2rem #222;
-		background-color: #808080;
-
-        input
+		background-color: transparent;
 	`;
 
-	const InputName = styled.input`
-		width: 50%;
-		border: 2px solid #;
+	const Button = styled.button`
+		width: 12rem;
+		height: 4rem;
+		font-family: 'Avenir Next Heavy';
+		font-size: 2rem;
+		text-transform: uppercase;
+		color: #fff;
+		margin: 1rem auto;
+		background: #2b93d1;
+		border: none;
 	`;
 
 	return (
 		<Div>
-			<form onSubmit={handleSubmit} action='submit'>
-				<input
-					type='text'
-					name='name'
-					value={name}
-					placeholder='Name'
-					onChange={(e) => setName(e.target.value)}
-					required
-				/>
+			<Form onSubmit={handleSubmit} action='submit'>
+				<TopLineDiv>
+					<Input
+						type='text'
+						name='name'
+						value={name}
+						placeholder='Name'
+						onChange={(e) => setName(e.target.value)}
+						required
+					/>
 
-				<input
-					type='tel'
-					name='phone'
-					value={phone}
-					placeholder='Phone'
-					onChange={(e) => setPhone(e.target.value)}
-				/>
+					<Input
+						type='tel'
+						name='phone'
+						value={phone}
+						placeholder='Phone'
+						onChange={(e) => setPhone(e.target.value)}
+					/>
+				</TopLineDiv>
 
-				<input
+				<Input
 					type='email'
 					name='email'
 					value={email}
@@ -69,7 +96,7 @@ const Form = () => {
 					required
 				/>
 
-				<input
+				<Input
 					type='text'
 					name='message'
 					value={message}
@@ -77,8 +104,8 @@ const Form = () => {
 					onChange={(e) => setMessage(e.target.value)}
 				/>
 
-				<button>Submit</button>
-			</form>
+				<Button>Let's go!</Button>
+			</Form>
 		</Div>
 	);
 };

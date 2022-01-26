@@ -63,4 +63,5 @@ export const Button = styled(motion.button)`
 	padding: 20px 40px;
 	margin: 2rem;
 	border: none;
+	max-width: 60%;
 `;

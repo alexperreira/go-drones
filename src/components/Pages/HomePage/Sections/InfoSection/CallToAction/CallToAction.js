@@ -1,7 +1,9 @@
 import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Section, BgOverlay, TextGroup, Button } from './CallToActionElements';
+import ContactButton from '../../../../../UI/ContactButton';
 
 const fadeIn = {
 	hidden: { opacity: 0, scale: 1 },
@@ -11,6 +13,7 @@ const fadeIn = {
 const CallToAction = () => {
 	const controls = useAnimation();
 	const { ref, inView } = useInView();
+	const navigate = useNavigate();
 
 	useEffect(() => {
 		if (inView) {
@@ -42,7 +45,15 @@ const CallToAction = () => {
 					>
 						Elevate your brand?
 					</motion.h2>
-					<Button whileHover={{ scale: 1.05 }}>Contact us</Button>
+					<ContactButton />
+					<TextGroup>
+						<Button
+							whileHover={{ scale: 1.05 }}
+							onClick={() => navigate('/our-process')}
+						>
+							Need more convincing?
+						</Button>
+					</TextGroup>
 				</TextGroup>
 			</BgOverlay>
 		</Section>

@@ -2,7 +2,6 @@ import React from 'react';
 
 import {
 	HeroContainer,
-	Logo,
 	HeroBg,
 	VideoBg,
 	HeroContent,
@@ -24,7 +23,6 @@ const ProcessHero = () => {
 
 	return (
 		<HeroContainer id='home'>
-			<Logo />
 			<HeroBg>
 				<VideoBg autoPlay loop muted src={Video} type='video/mp4' />
 			</HeroBg>
@@ -35,7 +33,7 @@ const ProcessHero = () => {
 					animate='visible'
 					transition={{ duration: 0.2, delay: 1 }}
 				>
-					How
+					Why
 				</motion.h1>
 				<motion.h2
 					variants={fadeRight}
@@ -43,7 +41,7 @@ const ProcessHero = () => {
 					animate='visible'
 					transition={{ duration: 0.2, delay: 1.2 }}
 				>
-					We do it
+					Go drones?
 				</motion.h2>
 			</HeroContent>
 		</HeroContainer>

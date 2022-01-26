@@ -6,7 +6,7 @@ import { Route, Routes } from 'react-router-dom';
 // import pages
 import Home from './components/Pages/HomePage/Home';
 import Process from './components/Pages/ProcessPage/Process';
-import Shows from './components/Pages/Shows';
+import Shows from './components/Pages/Shows/Shows';
 import Contact from './components/Pages/Contact/Contact';
 
 // import components
@@ -39,7 +39,6 @@ function App() {
 				<Route path='our-shows' element={<Shows />} />
 				<Route path='contact' element={<Contact />} />
 			</Routes>
-			{/* </ScrollToTop> */}
 			<Footer />
 		</div>
 	);

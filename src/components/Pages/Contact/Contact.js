@@ -159,7 +159,8 @@ const Contact = () => {
 				</Div>
 			</Section>
 			<Section>
-				<Form />
+				{/* <div id='form' style={{}}></div> */}
+				<Form id='form' />
 			</Section>
 		</>
 	);

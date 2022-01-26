@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+
 // import * as FaIcons from 'react-icons/fa';
 import * as AiIcons from 'react-icons/ai';
 import SidebarItem from './SidebarItem';
 // import Logo from '../../assets/images/gologo.png';
 import styles from './Sidebar.module.css';
 import MenuIcon from './MenuIcon';
-import goLogo from '../assets/images/gologo.png';
+import goLogo from '../assets/images/go-logo-white.png';
+import phoneIcon from '../assets/images/telephone-icon.png';
 
 const menuData = [
 	{
@@ -15,7 +17,7 @@ const menuData = [
 		path: '/',
 	},
 	{
-		title: 'Our Process',
+		title: 'Why Go Drones?',
 		path: '/our-process',
 	},
 	{
@@ -42,9 +44,24 @@ const Sidebar = () => {
 	const toggle = () => {
 		setIsOpen(!isOpen);
 	};
+
 	return (
 		<>
 			<nav className={styles.nav}>
+				<a href='tel:2082290300'>
+					<img
+						className={styles.phone}
+						src={phoneIcon}
+						rel='noreferrer'
+						alt=''
+					/>
+					(208)-229-0300
+				</a>
+				<Link to='/contact' onClick={() => window.scrollTo()}>
+					<motion.button whileHover={{ scale: 1.05 }} className={styles.button}>
+						Contact
+					</motion.button>
+				</Link>
 				<Link className={styles.navIcon} to='#' onClick={toggle}>
 					<MenuIcon isOpen={isOpen} toggle={toggle} />
 				</Link>
