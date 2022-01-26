@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/static/css/main.5cde776d.css",
+    "main.js": "/static/js/main.89f153cd.js",
+    "static/media/drone-reel.mp4": "/static/media/drone-reel.ef3d9a18e28f13a41cdb.mp4",
+    "static/media/drone-process-reel.mp4": "/static/media/drone-process-reel.aab001805a28cdccb666.mp4",
+    "static/media/section5-bg.png": "/static/media/section5-bg.a92482e84cf5ca495419.png",
+    "static/media/section6-bg.png": "/static/media/section6-bg.300122c48c7d4a4ff7d7.png",
+    "static/media/section3-bg.png": "/static/media/section3-bg.762ab89307cae5836827.png",
+    "static/media/section2-bg.png": "/static/media/section2-bg.6f7c3d227339218309ae.png",
+    "static/media/process-section1-bg.png": "/static/media/process-section1-bg.4cd0c02b1156f5fcc59d.png",
+    "static/media/section1-bg.png": "/static/media/section1-bg.9296af1b8ea9a6368c30.png",
+    "static/media/AvenirNextCyr-Light.ttf": "/static/media/AvenirNextCyr-Light.d09e867dfaea9eaee490.ttf",
+    "static/media/AvenirNextCyr-Thin.ttf": "/static/media/AvenirNextCyr-Thin.15b9098eb0e218e14af5.ttf",
+    "static/media/AvenirNextCyr-Regular.ttf": "/static/media/AvenirNextCyr-Regular.9a6e3dfb25ecd7c106ba.ttf",
+    "static/media/AvenirNextCyr-Heavy.ttf": "/static/media/AvenirNextCyr-Heavy.6d00862a749735cb9223.ttf",
+    "static/media/ICCU.png": "/static/media/ICCU.1a45366397bf5cbd4abc.png",
+    "static/media/gologo.png": "/static/media/gologo.940927ab5b95a572ff36.png",
+    "static/media/gologo-grey.png": "/static/media/gologo-grey.3c70c02133a85f6e1c35.png",
+    "static/media/RALPH.png": "/static/media/RALPH.71899142681c31a82a02.png",
+    "static/media/ART BASEL.png": "/static/media/ART BASEL.a79bd8fc2a78159bafd3.png",
+    "index.html": "/index.html",
+    "main.5cde776d.css.map": "/static/css/main.5cde776d.css.map",
+    "main.89f153cd.js.map": "/static/js/main.89f153cd.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5cde776d.css",
+    "static/js/main.89f153cd.js"
+  ]
+}
