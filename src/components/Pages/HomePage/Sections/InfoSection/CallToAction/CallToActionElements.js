@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
 import bg from '../../../../../assets/images/section6-bg.png';
+import { devices } from '../../../../../../device';
 
 export const Section = styled.div`
 	width: 100%;
@@ -52,6 +53,66 @@ export const TextGroup = styled.div`
 		text-transform: uppercase;
 		margin: 0;
 	}
+
+	@media ${devices.laptopL} {
+		max-width: 900px;
+
+		h1 {
+			font-size: 4.2rem;
+		}
+
+		h2 {
+			font-size: 4.2rem;
+		}
+	}
+
+	@media ${devices.laptop} {
+		max-width: 800px;
+
+		h1 {
+			font-size: 3.6rem;
+		}
+
+		h2 {
+			font-size: 3.6rem;
+		}
+	}
+
+	@media ${devices.tablet} {
+		max-width: 640px;
+
+		h1 {
+			font-size: 2.8rem;
+		}
+
+		h2 {
+			font-size: 2.8rem;
+		}
+	}
+
+	@media ${devices.tabletS} {
+		max-width: 400px;
+
+		h1 {
+			font-size: 2rem;
+		}
+
+		h2 {
+			font-size: 2rem;
+		}
+	}
+
+	@media ${devices.mobileL} {
+		max-width: 370px;
+
+		h1 {
+			font-size: 1.8rem;
+		}
+
+		h2 {
+			font-size: 1.8rem;
+		}
+	}
 `;
 
 export const Button = styled(motion.button)`
@@ -61,7 +122,29 @@ export const Button = styled(motion.button)`
 	font-family: 'Avenir Next Heavy';
 	font-size: 2rem;
 	padding: 20px 40px;
-	margin: 2rem;
+	margin: 4rem 2rem 0 2rem;
 	border: none;
 	max-width: 60%;
+
+	@media ${devices.laptop} {
+		font-size: 1.5rem;
+	}
+
+	@media ${devices.tablet} {
+		font-size: 1rem;
+	}
+
+	@media ${devices.tabletS} {
+		font-size: 0.8rem;
+	}
+
+	@media ${devices.mobileL} {
+		h1 {
+			font-size: 1.8rem;
+		}
+
+		h2 {
+			font-size: 1.8rem;
+		}
+	}
 `;

@@ -10,6 +10,11 @@ const fadeIn = {
 	visible: { opacity: 1, scale: [1, 1.5, 1] },
 };
 
+const fadeUp = {
+	hidden: { opacity: 0, y: 100 },
+	visible: { opacity: 1, y: 0 },
+};
+
 const CallToAction = () => {
 	const controls = useAnimation();
 	const { ref, inView } = useInView();
@@ -45,15 +50,19 @@ const CallToAction = () => {
 					>
 						Elevate your brand?
 					</motion.h2>
-					<ContactButton />
 					<TextGroup>
 						<Button
+							ref={ref}
+							variants={fadeUp}
+							initial='hidden'
+							animate={controls}
 							whileHover={{ scale: 1.05 }}
 							onClick={() => navigate('/our-process')}
 						>
 							Need more convincing?
 						</Button>
 					</TextGroup>
+					<ContactButton />
 				</TextGroup>
 			</BgOverlay>
 		</Section>

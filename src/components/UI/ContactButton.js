@@ -42,7 +42,6 @@ const ContactButton = () => {
 			variants={fadeUp}
 			initial='hidden'
 			animate={controls}
-			transition={{ duration: 1, delay: 0.2 }}
 			whileHover={{ scale: 1.05 }}
 			onClick={() => navigate('/contact')}
 		>

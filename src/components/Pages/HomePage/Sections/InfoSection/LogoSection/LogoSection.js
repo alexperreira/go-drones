@@ -7,9 +7,9 @@ import {
 	TextGroup,
 	LogoGroup,
 	Logo1,
-	Logo2,
-	Logo3,
-	Logo4,
+	// Logo2,
+	// Logo3,
+	// Logo4,
 	Logo5,
 } from './LogoSectionElements';
 
@@ -71,7 +71,7 @@ const LogoSection = () => {
 					>
 						<Logo1 />
 					</motion.div>
-					<motion.div
+					{/* <motion.div
 						ref={ref}
 						variants={fadeUp}
 						initial='hidden'
@@ -97,7 +97,7 @@ const LogoSection = () => {
 						transition={{ duration: 1, delay: 0.8 }}
 					>
 						<Logo4 />
-					</motion.div>
+					</motion.div> */}
 					<motion.div
 						ref={ref}
 						variants={fadeUp}

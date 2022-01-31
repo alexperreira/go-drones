@@ -1,21 +1,41 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import styled from 'styled-components';
 
-const Form = () => {
+const Form = (props) => {
 	const [name, setName] = useState('');
 	const [email, setEmail] = useState('');
 	const [phone, setPhone] = useState('');
 	const [message, setMessage] = useState('');
 
+	const nameInputRef = useRef();
+	const emailInputRef = useRef();
+	const phoneInputRef = useRef();
+	const messageInputRef = useRef();
+
+	const nameInputChangeHandler = (event) => {
+		setName(event.target.value);
+	};
+
+	const emailInputChangeHandler = (event) => {
+		setEmail(event.target.value);
+	};
+
+	const phoneInputChangeHandler = (event) => {
+		setPhone(event.target.value);
+	};
+
+	const messageInputChangeHandler = (event) => {
+		setMessage(event.target.value);
+	};
+
 	const handleSubmit = (e) => {
+		e.preventDefault();
 		console.log(`
             Name: ${name}
             Email: ${email}
             Phone: ${phone}
             Message: ${message}
         `);
-
-		e.preventDefault();
 	};
 
 	const Div = styled.div`
@@ -67,41 +87,46 @@ const Form = () => {
 
 	return (
 		<Div>
-			<Form onSubmit={handleSubmit} action='submit'>
+			<Form onSubmit={handleSubmit}>
 				<TopLineDiv>
 					<Input
 						type='text'
+						ref={nameInputRef}
 						name='name'
-						value={name}
+						value={setName}
 						placeholder='Name'
-						onChange={(e) => setName(e.target.value)}
+						// onChange={nameInputChangeHandler}
 						required
 					/>
 
 					<Input
 						type='tel'
+						ref={phoneInputRef}
 						name='phone'
 						value={phone}
 						placeholder='Phone'
-						onChange={(e) => setPhone(e.target.value)}
+						// onChange={phoneInputChangeHandler}
 					/>
 				</TopLineDiv>
 
 				<Input
 					type='email'
+					ref={emailInputRef}
 					name='email'
 					value={email}
 					placeholder='Email'
-					onChange={(e) => setEmail(e.target.value)}
+					// onChange={emailInputChangeHandler}
 					required
 				/>
 
 				<Input
 					type='text'
+					ref={messageInputRef}
 					name='message'
 					value={message}
+					onBlur
 					placeholder='Anything you want us to know?'
-					onChange={(e) => setMessage(e.target.value)}
+					// onChange={messageInputChangeHandler}
 				/>
 
 				<Button>Let's go!</Button>

@@ -105,6 +105,12 @@ export const H2Wrapper = styled.div`
 		font-size: 1.5rem;
 		margin-left: 0.5rem;
 	}
+
+	@media ${devices.tablet} {
+		h2 {
+			font-size: 1.2rem;
+		}
+	}
 `;
 
 // export const HeroH2 = styled.h2`
@@ -120,4 +126,10 @@ export const Slash = styled(motion.h3)`
 	margin: auto 1rem;
 	font-size: 1.5rem;
 	font-family: 'Avenir Next Thin';
+
+	@media ${devices.tablet} {
+		h3 {
+			font-size: 1.2rem;
+		}
+	}
 `;

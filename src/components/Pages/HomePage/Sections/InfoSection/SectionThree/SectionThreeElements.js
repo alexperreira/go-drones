@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import bg from '../../../../../assets/images/section3-bg.png';
+import { devices } from '../../../../../../device';
 
 export const Section = styled.div`
 	width: 100%;
@@ -9,6 +10,10 @@ export const Section = styled.div`
 	background-size: cover;
 	background-repeat: no-repeat;
 	z-index: 1;
+
+	@media ${devices.tablet} {
+		height: 100vh;
+	}
 `;
 
 export const BgOverlay = styled.div`
@@ -41,16 +46,51 @@ export const TextGroup = styled.div`
 		font-size: inherit;
 		color: #fff;
 	}
-`;
 
-export const Span = styled.span`
-	font-family: 'Avenir Next Heavy';
-	font-size: inherit;
-	color: #fff;
-`;
+	@media ${devices.laptop} {
+		max-width: 700px;
 
-export const InfoP = styled.p`
-	font-family: 'Avenir Next Regular';
-	font-size: 3.5rem;
-	color: #fff;
+		h1 {
+			font-size: 3rem;
+		}
+
+		h2 {
+			font-size: 3rem;
+		}
+
+		p {
+			font-size: 2.5rem;
+		}
+	}
+
+	@media ${devices.tablet} {
+		max-width: 600px;
+
+		h1 {
+			font-size: 2rem;
+		}
+
+		h2 {
+			font-size: 2rem;
+		}
+
+		p {
+			font-size: 2rem;
+		}
+	}
+	@media ${devices.tabletS} {
+		max-width: 400px;
+
+		h1 {
+			font-size: 1.5rem;
+		}
+
+		h2 {
+			font-size: 1.5rem;
+		}
+
+		p {
+			font-size: 1.5rem;
+		}
+	}
 `;

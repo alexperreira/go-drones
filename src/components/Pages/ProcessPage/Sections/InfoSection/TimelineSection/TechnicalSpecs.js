@@ -40,7 +40,7 @@ const TechnicalSpecs = () => {
 							animate={controls}
 							transition={{ duration: 1, delay: 0.2 }}
 						>
-							Go Drones
+							For the techies
 						</motion.h1>
 						<motion.h2
 							ref={ref}

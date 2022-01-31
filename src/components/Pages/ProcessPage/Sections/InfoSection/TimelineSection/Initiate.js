@@ -36,7 +36,7 @@ const Initiate = () => {
 					animate={controls}
 					transition={{ duration: 1, delay: 0.2 }}
 				>
-					Our process to bring
+					For the visionaries
 				</motion.h1>
 				<motion.h2
 					ref={ref}
@@ -45,7 +45,7 @@ const Initiate = () => {
 					animate={controls}
 					transition={{ duration: 1, delay: 0.4 }}
 				>
-					your vision to life
+					Our process
 				</motion.h2>
 			</TextGroup>
 			<Div>

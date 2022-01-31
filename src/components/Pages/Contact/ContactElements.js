@@ -10,11 +10,14 @@ export const Section = styled.div`
 
 export const HeroContainer = styled.div`
 	background: url(${bg});
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
 	display: flex;
 	justify-content: left;
 	align-items: center;
 	/* padding: 0 30px; */
-	height: 800px;
+	height: 100vh;
 	width: 100%;
 	position: relative;
 	z-index: 2;
@@ -100,7 +103,7 @@ export const Div = styled(motion.div)`
 
 	p {
 		font-family: 'Avenir Next Regular';
-		font-size: 3rem;
+		font-size: 2.5rem;
 		color: #fff;
 	}
 
