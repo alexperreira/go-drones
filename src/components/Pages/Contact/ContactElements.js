@@ -17,7 +17,7 @@ export const HeroContainer = styled.div`
 	justify-content: left;
 	align-items: center;
 	/* padding: 0 30px; */
-	height: 100vh;
+	height: 50rem;
 	width: 100%;
 	position: relative;
 	z-index: 2;
@@ -73,6 +73,18 @@ export const HeroContent = styled.div`
 		-webkit-text-fill-color: transparent;
 		-webkit-text-stroke: 2px #fff;
 	}
+
+	@media (max-width: 1200px) {
+		h1 {
+			font-size: 5rem;
+			line-height: 5.5rem;
+		}
+
+		h2 {
+			font-size: 5rem;
+			line-height: 5.5rem;
+		}
+	}
 `;
 
 export const Div = styled(motion.div)`
@@ -111,5 +123,33 @@ export const Div = styled(motion.div)`
 		font-family: 'Avenir Next Heavy';
 		font-size: inherit;
 		color: #fff;
+	}
+
+	@media (max-width: 1200px) {
+		width: 750px;
+		h1 {
+			font-size: 2.5rem;
+		}
+
+		h2 {
+			font-size: 2.5rem;
+		}
+		p {
+			font-size: 2rem;
+		}
+	}
+
+	@media (max-width: 768px) {
+		width: 100%;
+		h1 {
+			font-size: 2rem;
+		}
+
+		h2 {
+			font-size: 2rem;
+		}
+		p {
+			font-size: 1.6rem;
+		}
 	}
 `;

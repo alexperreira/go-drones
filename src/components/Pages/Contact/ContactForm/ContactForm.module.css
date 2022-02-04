@@ -2,14 +2,14 @@
 	margin: 0.5rem auto;
 }
 
-.topLine {
+/* .topLine {
 	display: flex;
 	justify-content: space-evenly;
 }
 
 .topLine > input {
 	width: 100%;
-}
+} */
 
 .input {
 	background: transparent;
@@ -49,4 +49,10 @@ button {
 button:disabled {
 	background: #eee;
 	color: #999;
+}
+
+@media (max-width: 768px) {
+	.contactForm {
+		width: 100%;
+	}
 }

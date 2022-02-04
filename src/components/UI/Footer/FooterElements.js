@@ -5,6 +5,7 @@ import goLogo from '../../assets/images/go-drones-white.png';
 export const Section = styled.div`
 	background: #000;
 	height: 400px;
+	min-width: 100%;
 	width: 100%;
 	display: flex;
 	flex-direction: column;

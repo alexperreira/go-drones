@@ -7,14 +7,12 @@ export const HeroContainer = styled.div`
 	display: flex;
 	justify-content: left;
 	align-items: center;
-	/* padding: 0 30px; */
-	// height: 800px;
+	min-width: 100%;
 	height: 50rem;
 	margin: 0;
 	width: 100%;
 	position: relative;
 	z-index: 2;
-	top: 0;
 
 	&::before {
 		content: '';
@@ -39,17 +37,23 @@ export const HeroBg = styled.div`
 	right: 0;
 	bottom: 0;
 	left: 0;
-	width: 100%;
-	height: 100%;
+	min-width: 1024px;
+	min-height: 100%;
 	overflow: hidden;
 `;
 
 export const VideoBg = styled.video`
-	width: 100%;
-	height: 100%;
+	min-width: 1024px;
+	min-height: 100%;
 	-o-object-fit: cover;
 	object-fit: cover;
 	background: #232342;
+	position: relative;
+
+	@media (max-width: 1024px) {
+		left: 50%;
+		margin-left: -512px;
+	}
 `;
 
 export const HeroContent = styled.div`

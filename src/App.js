@@ -1,6 +1,7 @@
 // import dependencies
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
+import './App.css';
 
 // import pages
 import Home from './components/Pages/HomePage/Home';

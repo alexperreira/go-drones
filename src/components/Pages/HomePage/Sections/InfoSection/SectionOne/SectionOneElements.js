@@ -3,7 +3,8 @@ import bg from '../../../../../assets/images/section1-bg.png';
 import { devices } from '../../../../../../device';
 
 export const Section = styled.div`
-	width: 100%;
+	min-width: 100%;
+	// width: 100%;
 	height: 50rem;
 	margin-top: -1.3rem;
 	background: url(${bg});
