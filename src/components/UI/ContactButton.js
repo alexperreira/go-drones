@@ -10,6 +10,10 @@ const fadeUp = {
 };
 
 const Button = styled(motion.button)`
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	background: #2b93d1;
 	color: #fff;
 	text-transform: uppercase;

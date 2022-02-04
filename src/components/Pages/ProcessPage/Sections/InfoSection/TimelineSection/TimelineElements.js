@@ -16,7 +16,7 @@ export const Div = styled.div`
 	align-self: center;
 	width: 1000px;
 	display: block;
-	margin: 2rem;
+	margin: 4rem;
 `;
 
 export const TextGroup = styled.div`

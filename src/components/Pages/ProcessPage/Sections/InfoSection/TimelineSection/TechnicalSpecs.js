@@ -4,7 +4,7 @@ import { useInView } from 'react-intersection-observer';
 import { Section, TextGroup, Div, TextBlurb } from './TimelineElements';
 
 const center = { margin: '0 auto', textAlign: 'center' };
-const bottom = { margin: '2rem 0', padding: '4rem 0' };
+// const bottom = { margin: '2rem 0', padding: '4rem 0' };
 
 const fadeRight = {
 	hidden: { opacity: 0, x: 100 },
@@ -29,7 +29,7 @@ const TechnicalSpecs = () => {
 	}, [controls, inView]);
 	return (
 		// <Section>
-		<Section style={bottom}>
+		<Section>
 			<Div>
 				<TextGroup>
 					<Div>

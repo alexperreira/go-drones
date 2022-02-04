@@ -4,7 +4,6 @@ export const Section = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	margin: 6rem 0;
 	width: 100%;
 	/* height: 100%; */
 	background: #000;
@@ -16,7 +15,7 @@ export const Div = styled.div`
 	align-self: center;
 	width: 1000px;
 	display: block;
-	margin: 2rem;
+	margin: 4rem;
 	color: #fff;
 	text-align: center;
 

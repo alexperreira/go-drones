@@ -1,0 +1,29 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	margin: 0.5rem auto;
+	width: 100%;
+}
+
+label {
+	color: #808080;
+	text-transform: capitalize;
+}
+
+.input {
+	background: transparent;
+	border: 1px solid #808080;
+	margin: 1rem auto;
+	padding: 0.5rem;
+	height: 2rem;
+	width: 100%;
+	color: #808080;
+}
+
+.input:nth-child(4n) {
+	height: 5rem;
+}
+
+.error {
+	color: red;
+}

@@ -30,6 +30,8 @@ export const BgOverlay = styled.div`
 `;
 
 export const TextGroup = styled.div`
+	display: flex;
+	flex-direction: column;
 	align-self: center;
 	width: 1000px;
 	text-align: center;
@@ -116,6 +118,11 @@ export const TextGroup = styled.div`
 `;
 
 export const Button = styled(motion.button)`
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	align-self: center;
 	background: #2b93d1;
 	color: #fff;
 	text-transform: uppercase;
@@ -124,7 +131,7 @@ export const Button = styled(motion.button)`
 	padding: 20px 40px;
 	margin: 4rem 2rem 0 2rem;
 	border: none;
-	max-width: 60%;
+	width: 35rem;
 
 	@media ${devices.laptop} {
 		font-size: 1.5rem;

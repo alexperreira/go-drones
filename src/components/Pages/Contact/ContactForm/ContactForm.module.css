@@ -1,0 +1,52 @@
+.container {
+	margin: 0.5rem auto;
+}
+
+.topLine {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.topLine > input {
+	width: 100%;
+}
+
+.input {
+	background: transparent;
+	border: 1px solid #808080;
+	margin: 1rem auto;
+	padding: 0.5rem;
+	height: 2rem;
+	width: 100%;
+	color: #808080;
+}
+
+.contactForm {
+	margin: 5rem auto;
+	display: flex;
+	flex-direction: column;
+	width: 600px;
+	min-width: 100px;
+	min-height: 400px;
+	padding: 1rem 2rem 2rem 2rem;
+	margin-top: 5rem;
+	box-shadow: 0 0.5rem 2rem #222;
+	background-color: transparent;
+}
+
+button {
+	width: 12rem;
+	height: 4rem;
+	font-family: 'Avenir Next Heavy';
+	font-size: 2rem;
+	text-transform: uppercase;
+	color: #fff;
+	margin: 1rem auto;
+	background: #2b93d1;
+	border: none;
+}
+
+button:disabled {
+	background: #eee;
+	color: #999;
+}

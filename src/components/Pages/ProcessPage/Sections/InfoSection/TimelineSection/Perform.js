@@ -46,9 +46,9 @@ const Perform = () => {
 						animate={controls}
 						transition={{ duration: 1, delay: 0.2 }}
 					>
-						Our professional pilots and production crew and pilots handle every
-						aspect of your show&mdash;from setup to tear down&mdash;allowing you
-						to <span>sit back and relax</span> as we{' '}
+						Our professional pilots and production crew handle every aspect of
+						your show&mdash;from setup to tear down&mdash;allowing you to{' '}
+						<span>sit back and relax</span> as we{' '}
 						<span>raise your brand to new heights</span>
 					</motion.p>
 				</TextBlurb>

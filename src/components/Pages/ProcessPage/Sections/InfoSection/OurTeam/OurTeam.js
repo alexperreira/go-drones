@@ -39,10 +39,15 @@ const OurTeam = () => {
 					animate={controls}
 					transition={{ duration: 1, delay: 0.4 }}
 				>
-					The <span>Go Drones team</span> has worked at some of the biggest
-					shows <span>across the globe</span>. Our partnerships with other
-					companies allows us to have the <span>best talent</span> as well as
-					access to up to <span>1000 drones</span> to use in our shows.
+					Our experienced pilots, professional in-house design team, and
+					production crew has worked with some of the{' '}
+					<span>biggest shows across the globe.</span> We are constantly
+					upgrading and improving our proprietary software to make the best even
+					better, allowing us to set ourselves apart from everyone else in the
+					industry by scaling your one-of-a-kind drone show from one&mdash;to thousands.
+					<br />
+					<br />
+					Every <span>Go Drones</span> show is programmed and rendered with our indsutry-leading fligh-planning software, and then tested prior to the official launch to verify content, movement, location, and safety perimeters to keep all clients, staff, and spectators safe. 
 				</motion.p>
 			</Div>
 		</Section>

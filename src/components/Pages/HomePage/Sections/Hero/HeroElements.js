@@ -8,13 +8,15 @@ export const HeroContainer = styled.div`
 	justify-content: left;
 	align-items: center;
 	/* padding: 0 30px; */
-	height: 800px;
+	// height: 800px;
+	height: 50rem;
+	margin: 0;
 	width: 100%;
 	position: relative;
 	z-index: 2;
 	top: 0;
 
-	:before {
+	&::before {
 		content: '';
 		position: absolute;
 		top: 0;

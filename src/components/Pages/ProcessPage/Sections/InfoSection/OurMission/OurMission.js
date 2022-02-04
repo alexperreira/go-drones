@@ -40,9 +40,11 @@ const OurMission = () => {
 					animate={controls}
 					transition={{ duration: 1, delay: 0.4 }}
 				>
-					Our <span>mission</span> is to ensure your vision, direction, and
-					brand are represented in the most <span>unique, cutting edge</span>{' '}
-					way through custom drone shows.
+					We exist to help your brand leave a lasting impression long after your
+					show is over. From 2-D shapes and images to 3-D animation and
+					limitless movement, <span>Go Drones' mission</span> is to{' '}
+					<span>bring your vision to life</span> in any color, shape, or form
+					you can imagine.
 				</motion.p>
 			</Div>
 			<ContactButton style={{ margin: '4rem 0' }} />
