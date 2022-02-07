@@ -23,6 +23,7 @@ export const Div = styled.div`
 		font-family: 'Avenir Next Heavy';
 		font-size: 2.5rem;
 		text-transform: uppercase;
+		margin-bottom: 2rem;
 	}
 
 	p {

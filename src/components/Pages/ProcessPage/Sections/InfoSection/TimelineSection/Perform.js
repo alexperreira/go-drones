@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Section, Div, TextBlurb } from './TimelineElements';
+import { Section, TextBlurb, ImageLeft, Grid } from './TimelineElements';
+import perform from '../../../../../assets/images/PERFORM.png';
 
 const right = { float: 'right', textAlign: 'right' };
 
@@ -28,7 +29,18 @@ const Perform = () => {
 	}, [controls, inView]);
 	return (
 		<Section>
-			<Div>
+			<Grid>
+				<ImageLeft>
+					<motion.img
+						ref={ref}
+						variants={fadeLeft}
+						initial='hidden'
+						animate={controls}
+						transition={{ duration: 1, delay: 0.2 }}
+						src={perform}
+						alt=''
+					/>
+				</ImageLeft>
 				<TextBlurb style={right}>
 					<motion.h3
 						ref={ref}
@@ -52,7 +64,7 @@ const Perform = () => {
 						<span>raise your brand to new heights</span>
 					</motion.p>
 				</TextBlurb>
-			</Div>
+			</Grid>
 		</Section>
 	);
 };

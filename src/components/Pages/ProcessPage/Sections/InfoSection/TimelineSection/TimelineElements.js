@@ -1,27 +1,56 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const Section = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	/* align-items: center; */
 	width: 100%;
 	/* height: 100%; */
 	background: #000;
 	z-index: 1;
 `;
 
-export const Div = styled.div`
+export const Container = css`
 	position: relative;
 	align-self: center;
-	width: 1000px;
-	display: block;
+	width: 100%;
+	max-width: 1200px;
 	margin: 4rem;
+`;
+
+export const Grid = styled.div`
+	${Container}
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+`;
+
+export const Div = styled.div`
+	${Container}
+`;
+
+export const Image = css`
+	width: 100%;
+	max-width: 400px;
+`;
+
+export const ImageRight = styled.div`
+	margin: 0 0 0 auto;
+	img {
+		${Image}
+	}
+`;
+
+export const ImageLeft = styled.div`
+	margin: 0 auto 0 0;
+	img {
+		${Image}
+	}
 `;
 
 export const TextGroup = styled.div`
 	align-self: center;
-	width: 1000px;
+
+	// width: 1000px;
 
 	h1 {
 		color: #fff;
@@ -49,6 +78,9 @@ export const TextGroup = styled.div`
 export const TextBlurb = styled.div`
 	width: 600px;
 	color: #fff;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 
 	h3 {
 		font-family: 'Avenir Next Heavy';

@@ -1,7 +1,15 @@
 import React, { useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Section, TextGroup, Div, TextBlurb } from './TimelineElements';
+import {
+	Section,
+	TextGroup,
+	TextBlurb,
+	ImageRight,
+	Grid,
+} from './TimelineElements';
+
+import initiate from '../../../../../assets/images/INITIATE.png';
 
 const left = { float: 'left', textAlign: 'left' };
 
@@ -48,7 +56,7 @@ const Initiate = () => {
 					Our process
 				</motion.h2>
 			</TextGroup>
-			<Div>
+			<Grid>
 				<TextBlurb style={left}>
 					<motion.h3
 						ref={ref}
@@ -70,7 +78,18 @@ const Initiate = () => {
 						<span>we completely understand </span> your vision
 					</motion.p>
 				</TextBlurb>
-			</Div>
+				<ImageRight>
+					<motion.img
+						ref={ref}
+						variants={fadeRight}
+						initial='hidden'
+						animate={controls}
+						transition={{ duration: 1, delay: 0.2 }}
+						src={initiate}
+						alt=''
+					/>
+				</ImageRight>
+			</Grid>
 		</Section>
 	);
 };

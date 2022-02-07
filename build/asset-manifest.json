@@ -1,9 +1,10 @@
 {
   "files": {
-    "main.css": "/static/css/main.593c8213.css",
-    "main.js": "/static/js/main.40422691.js",
+    "main.css": "/static/css/main.94abc090.css",
+    "main.js": "/static/js/main.44208d22.js",
     "static/media/drone-reel.mp4": "/static/media/drone-reel.2002ccf977100405d2a4.mp4",
     "static/media/drone-process-reel.mp4": "/static/media/drone-process-reel.aab001805a28cdccb666.mp4",
+    "static/media/gol-drones-hero.png": "/static/media/gol-drones-hero.815c7fcf69b0896cbdd6.png",
     "static/media/section3-bg.png": "/static/media/section3-bg.5e53c32cb8903536e626.png",
     "static/media/section2-bg.png": "/static/media/section2-bg.434529e7ebd40dee2dea.png",
     "static/media/section1-bg.png": "/static/media/section1-bg.37251fa6fb407103f730.png",
@@ -11,8 +12,14 @@
     "static/media/twinfalls-thumbnail.png": "/static/media/twinfalls-thumbnail.1185cdbaa6adc108d118.png",
     "static/media/edc-thumbnail.png": "/static/media/edc-thumbnail.d69e7bb4877e4dee20f7.png",
     "static/media/section6-bg.png": "/static/media/section6-bg.300122c48c7d4a4ff7d7.png",
+    "static/media/PERFORM.png": "/static/media/PERFORM.9806bf2b4b43669d7e8d.png",
+    "static/media/ANIMATE.png": "/static/media/ANIMATE.711162b8d8d33d211388.png",
+    "static/media/INITIATE.png": "/static/media/INITIATE.2b6226fbfb1475221913.png",
+    "static/media/PREPARE.png": "/static/media/PREPARE.31521b5c1b0fba9def45.png",
+    "static/media/shows-bg.jpg": "/static/media/shows-bg.2640263da896304a6406.jpg",
     "static/media/process-section1-bg.png": "/static/media/process-section1-bg.4cd0c02b1156f5fcc59d.png",
     "static/media/AvenirNextCyr-Light.ttf": "/static/media/AvenirNextCyr-Light.d09e867dfaea9eaee490.ttf",
+    "static/media/edc-vegas.jpg": "/static/media/edc-vegas.4df297eadabc20063cdc.jpg",
     "static/media/AvenirNextCyr-Thin.ttf": "/static/media/AvenirNextCyr-Thin.15b9098eb0e218e14af5.ttf",
     "static/media/AvenirNextCyr-Regular.ttf": "/static/media/AvenirNextCyr-Regular.9a6e3dfb25ecd7c106ba.ttf",
     "static/media/AvenirNextCyr-Heavy.ttf": "/static/media/AvenirNextCyr-Heavy.6d00862a749735cb9223.ttf",
@@ -22,11 +29,11 @@
     "static/media/gologo.png": "/static/media/gologo.940927ab5b95a572ff36.png",
     "static/media/telephone-icon.png": "/static/media/telephone-icon.16387389c1607ebacfc7.png",
     "index.html": "/index.html",
-    "main.593c8213.css.map": "/static/css/main.593c8213.css.map",
-    "main.40422691.js.map": "/static/js/main.40422691.js.map"
+    "main.94abc090.css.map": "/static/css/main.94abc090.css.map",
+    "main.44208d22.js.map": "/static/js/main.44208d22.js.map"
   },
   "entrypoints": [
-    "static/css/main.593c8213.css",
-    "static/js/main.40422691.js"
+    "static/css/main.94abc090.css",
+    "static/js/main.44208d22.js"
   ]
 }

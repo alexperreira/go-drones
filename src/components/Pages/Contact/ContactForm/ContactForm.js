@@ -9,7 +9,8 @@ const ContactForm = (props) => {
 
 	return (
 		<>
-			<form className={styles.contactForm}>
+			<form className={styles.contactForm} name='contactform' method='POST'>
+				<input type='hidden' name='form-name' value='contactForm' />
 				{renderFormInputs()}
 				<button
 					// className={styles.button}

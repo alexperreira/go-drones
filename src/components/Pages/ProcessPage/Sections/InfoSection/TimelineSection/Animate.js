@@ -1,7 +1,9 @@
 import React, { useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Section, Div, TextBlurb } from './TimelineElements';
+import { Section, TextBlurb, ImageLeft, Grid } from './TimelineElements';
+
+import animate from '../../../../../assets/images/ANIMATE.png';
 
 const right = { float: 'right', textAlign: 'right' };
 
@@ -28,7 +30,18 @@ const Animate = () => {
 	});
 	return (
 		<Section>
-			<Div>
+			<Grid>
+				<ImageLeft>
+					<motion.img
+						ref={ref}
+						variants={fadeLeft}
+						initial='hidden'
+						animate={controls}
+						transition={{ duration: 1, delay: 0.2 }}
+						src={animate}
+						alt='Work'
+					/>
+				</ImageLeft>
 				<TextBlurb style={right}>
 					<motion.h3
 						ref={ref}
@@ -51,7 +64,7 @@ const Animate = () => {
 						awe-inspiring show that <span> brings your vision to life</span>
 					</motion.p>
 				</TextBlurb>
-			</Div>
+			</Grid>
 		</Section>
 	);
 };

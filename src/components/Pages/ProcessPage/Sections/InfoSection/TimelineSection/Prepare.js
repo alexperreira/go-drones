@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Section, Div, TextBlurb } from './TimelineElements';
+import { Section, TextBlurb, ImageRight, Grid } from './TimelineElements';
+import prepare from '../../../../../assets/images/PREPARE.png';
 
 const left = { float: 'left', textAlign: 'left' };
 
@@ -28,7 +29,7 @@ const Prepare = () => {
 	});
 	return (
 		<Section>
-			<Div>
+			<Grid>
 				<TextBlurb style={left}>
 					<motion.h3
 						ref={ref}
@@ -51,7 +52,18 @@ const Prepare = () => {
 						<span>your show will be flawlessly executed</span>
 					</motion.p>
 				</TextBlurb>
-			</Div>
+				<ImageRight>
+					<motion.img
+						ref={ref}
+						variants={fadeRight}
+						initial='hidden'
+						animate={controls}
+						transition={{ duration: 1, delay: 0.2 }}
+						src={prepare}
+						alt=''
+					/>
+				</ImageRight>
+			</Grid>
 		</Section>
 	);
 };

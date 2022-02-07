@@ -1,9 +1,9 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { motion } from 'framer-motion';
 import { devices } from '../../../../../device';
 
 export const HeroContainer = styled.div`
-	background: #0c0c0c;
+	background: #fff;
 	display: flex;
 	justify-content: left;
 	align-items: center;
@@ -33,6 +33,7 @@ export const HeroContainer = styled.div`
 
 export const HeroBg = styled.div`
 	position: absolute;
+	align-self: center;
 	top: 0;
 	right: 0;
 	bottom: 0;
@@ -44,6 +45,7 @@ export const HeroBg = styled.div`
 
 export const VideoBg = styled.video`
 	min-width: 1024px;
+	width: 100%;
 	min-height: 100%;
 	-o-object-fit: cover;
 	object-fit: cover;
@@ -56,6 +58,16 @@ export const VideoBg = styled.video`
 	}
 `;
 
+export const Font = css`
+	color: #fff;
+	font-size: clamp(6rem, 8vw, 10rem);
+	font-family: 'Avenir Next Heavy';
+	text-align: left;
+	text-transform: uppercase;
+	line-height: clamp(6.5rem, 8vw, 8.5rem);
+	margin: 0;
+`;
+
 export const HeroContent = styled.div`
 	z-index: 3;
 	max-width: 1200px;
@@ -64,23 +76,11 @@ export const HeroContent = styled.div`
 	margin-left: 1.5rem;
 
 	h1 {
-		color: #fff;
-		font-size: 10rem;
-		font-family: 'Avenir Next Heavy';
-		text-align: left;
-		text-transform: uppercase;
-		line-height: 8.5rem;
-		margin: 0;
+		${Font}
 	}
 
 	h2 {
-		color: #fff;
-		font-size: 10rem;
-		font-family: 'Avenir Next Heavy';
-		text-align: left;
-		text-transform: uppercase;
-		line-height: 8.5rem;
-		margin: 0;
+		${Font}
 		background-clip: text;
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
