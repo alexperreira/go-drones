@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import useForm from './useForm';
 import { contactForm } from './utils/formConfig';
 import styles from './ContactForm.module.css';
+import SuccessModal from './SuccessModal';
 
 const ContactForm = (props) => {
 	const [success, setSuccess] = useState(false);
@@ -16,9 +17,7 @@ const ContactForm = (props) => {
 
 	return (
 		<>
-			{success && (
-				<p>Thanks for your message! We will be reaching out shortly!</p>
-			)}
+			{success && <SuccessModal />}
 			<form
 				className={styles.contactForm}
 				name='contactform'
