@@ -9,7 +9,12 @@ const ContactForm = (props) => {
 
 	return (
 		<>
-			<form className={styles.contactForm} name='contactform' method='POST'>
+			<form
+				className={styles.contactForm}
+				name='contactform'
+				method='POST'
+				data-netlify='true'
+			>
 				<input type='hidden' name='form-name' value='contactForm' />
 				{renderFormInputs()}
 				<button
