@@ -1,19 +1,30 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 // import { useForm } from 'react-hook-form';
 import useForm from './useForm';
 import { contactForm } from './utils/formConfig';
 import styles from './ContactForm.module.css';
 
 const ContactForm = (props) => {
+	const [success, setSuccess] = useState(false);
 	const { renderFormInputs, isFormValid } = useForm(contactForm);
+
+	useEffect(() => {
+		if (window.location.search.includes('sucess=true')) {
+			setSuccess(true);
+		}
+	}, []);
 
 	return (
 		<>
+			{success && (
+				<p>Thanks for your message! We will be reaching out shortly!</p>
+			)}
 			<form
 				className={styles.contactForm}
 				name='contactform'
 				method='POST'
 				data-netlify='true'
+				action='/contact/?success=true'
 			>
 				<input type='hidden' name='form-name' value='contactForm' />
 				{renderFormInputs()}
