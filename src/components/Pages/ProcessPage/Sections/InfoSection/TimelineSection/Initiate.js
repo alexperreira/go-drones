@@ -7,6 +7,7 @@ import {
 	TextBlurb,
 	ImageRight,
 	Grid,
+	Div,
 } from './TimelineElements';
 
 import initiate from '../../../../../assets/images/INITIATE.png';
@@ -56,40 +57,42 @@ const Initiate = () => {
 					Our process
 				</motion.h2>
 			</TextGroup>
-			<Grid>
-				<TextBlurb style={left}>
-					<motion.h3
-						ref={ref}
-						variants={fadeRight}
-						initial='hidden'
-						animate={controls}
-						transition={{ duration: 1, delay: 0.2 }}
-					>
-						Initiate
-					</motion.h3>
-					<motion.p
-						ref={ref}
-						variants={fadeLeft}
-						initial='hidden'
-						animate={controls}
-						transition={{ duration: 1, delay: 0.2 }}
-					>
-						Our <span> world-class team</span> collaborates with you to ensure{' '}
-						<span>we completely understand </span> your vision
-					</motion.p>
-				</TextBlurb>
-				<ImageRight>
-					<motion.img
-						ref={ref}
-						variants={fadeRight}
-						initial='hidden'
-						animate={controls}
-						transition={{ duration: 1, delay: 0.2 }}
-						src={initiate}
-						alt=''
-					/>
-				</ImageRight>
-			</Grid>
+			<Div>
+				<Grid>
+					<TextBlurb style={left}>
+						<motion.h3
+							ref={ref}
+							variants={fadeRight}
+							initial='hidden'
+							animate={controls}
+							transition={{ duration: 1, delay: 0.2 }}
+						>
+							Initiate
+						</motion.h3>
+						<motion.p
+							ref={ref}
+							variants={fadeLeft}
+							initial='hidden'
+							animate={controls}
+							transition={{ duration: 1, delay: 0.2 }}
+						>
+							Our <span> world-class team</span> collaborates with you to ensure{' '}
+							<span>we completely understand </span> your vision
+						</motion.p>
+					</TextBlurb>
+					<ImageRight>
+						<motion.img
+							ref={ref}
+							variants={fadeRight}
+							initial='hidden'
+							animate={controls}
+							transition={{ duration: 1, delay: 0.2 }}
+							src={initiate}
+							alt=''
+						/>
+					</ImageRight>
+				</Grid>
+			</Div>
 		</Section>
 	);
 };

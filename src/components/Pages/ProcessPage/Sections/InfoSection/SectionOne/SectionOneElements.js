@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import bg from '../../../../../assets/images/process-section1-bg.png';
+import { devices } from '../../../../../../device';
 
 export const Section = styled.div`
 	width: 100%;
@@ -24,6 +25,12 @@ export const BgOverlay = styled.div`
 	width: 100%;
 	height: 100%;
 	z-index: 2;
+
+	@media ${devices.tablet} {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
 `;
 
 export const TextGroup = styled.div`
@@ -62,6 +69,69 @@ export const TextGroup = styled.div`
 		font-family: 'Avenir Next Heavy';
 		font-size: inherit;
 		color: #fff;
+	}
+
+	@media ${devices.laptop} {
+		max-width: 700px;
+
+		h1 {
+			font-size: 3rem;
+		}
+
+		h2 {
+			font-size: 3rem;
+		}
+
+		p {
+			font-size: 2.5rem;
+		}
+	}
+
+	@media ${devices.tablet} {
+		max-width: 600px;
+		margin: 1rem 0;
+
+		h1 {
+			font-size: 2rem;
+		}
+
+		h2 {
+			font-size: 2rem;
+		}
+
+		p {
+			font-size: 2rem;
+		}
+	}
+	@media ${devices.tabletS} {
+		max-width: 400px;
+
+		h1 {
+			font-size: 1.5rem;
+		}
+
+		h2 {
+			font-size: 1.5rem;
+		}
+
+		p {
+			font-size: 1.5rem;
+		}
+	}
+
+	@media ${devices.mobileL} {
+		max-width: 90%;
+
+		h1 {
+			font-size: 1.2rem;
+		}
+
+		h2 {
+			font-size: 1.2rem;
+		}
+		p {
+			font-size: 1.2rem;
+		}
 	}
 `;
 

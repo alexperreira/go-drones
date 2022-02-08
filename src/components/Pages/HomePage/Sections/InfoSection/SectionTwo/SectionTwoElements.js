@@ -13,7 +13,6 @@ export const Section = styled.div`
 	z-index: 1;
 
 	@media ${devices.tablet} {
-		height: 100vh;
 	}
 `;
 
@@ -117,6 +116,21 @@ export const TextGroup = styled.div`
 
 		p {
 			font-size: 1.5rem;
+		}
+	}
+
+	@media ${devices.mobileL} {
+		max-width: 90%;
+
+		h1 {
+			font-size: 1.2rem;
+		}
+
+		h2 {
+			font-size: 1.2rem;
+		}
+		p {
+			font-size: 1.2rem;
 		}
 	}
 `;

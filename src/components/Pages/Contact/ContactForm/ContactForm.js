@@ -18,23 +18,25 @@ const ContactForm = (props) => {
 	return (
 		<>
 			{success && <SuccessModal />}
-			<form
-				className={styles.contactForm}
-				name='contactform'
-				method='POST'
-				data-netlify='true'
-				action='/contact/?success=true'
-			>
-				<input type='hidden' name='form-name' value='contactForm' />
-				{renderFormInputs()}
-				<button
-					// className={styles.button}
-					type='submit'
-					disabled={!isFormValid()}
+			<div className={styles.container}>
+				<form
+					className={styles.contactForm}
+					name='contactform'
+					method='POST'
+					data-netlify='true'
+					action='/contact/?success=true'
 				>
-					LET'S GO!
-				</button>
-			</form>
+					<input type='hidden' name='form-name' value='contactForm' />
+					{renderFormInputs()}
+					<button
+						// className={styles.button}
+						type='submit'
+						disabled={!isFormValid()}
+					>
+						LET'S GO!
+					</button>
+				</form>
+			</div>
 			{/* <Form onSubmit={handleSubmit}>
 				<TopLineDiv>
 					<Input

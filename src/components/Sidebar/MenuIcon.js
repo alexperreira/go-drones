@@ -35,8 +35,8 @@ const MenuIcon = ({ isOpen, toggle }) => {
 				<svg
 					className='burger'
 					version='1.1'
-					height='100'
-					width='100'
+					// height='100'
+					// width='100'
 					viewBox='0 0 100 100'
 				>
 					<path

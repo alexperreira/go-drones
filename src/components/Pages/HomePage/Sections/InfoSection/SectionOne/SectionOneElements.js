@@ -4,7 +4,7 @@ import { devices } from '../../../../../../device';
 
 export const Section = styled.div`
 	min-width: 100%;
-	// width: 100%;
+	width: 100vw;
 	height: 50rem;
 	margin-top: -1.3rem;
 	background: url(${bg});
@@ -14,7 +14,7 @@ export const Section = styled.div`
 	z-index: 1;
 
 	@media ${devices.tablet} {
-		height: 100vh;
+		width: 100vw;
 	}
 `;
 
@@ -120,6 +120,21 @@ export const TextGroup = styled.div`
 
 		p {
 			font-size: 1.5rem;
+		}
+	}
+
+	@media ${devices.mobileL} {
+		max-width: 90%;
+
+		h1 {
+			font-size: 1.2rem;
+		}
+
+		h2 {
+			font-size: 1.2rem;
+		}
+		p {
+			font-size: 1.2rem;
 		}
 	}
 `;

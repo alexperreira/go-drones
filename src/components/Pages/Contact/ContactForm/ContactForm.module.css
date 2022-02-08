@@ -1,5 +1,5 @@
 .container {
-	margin: 0.5rem auto;
+	margin-right: 40px;
 }
 
 /* .topLine {
@@ -28,8 +28,7 @@
 	width: 600px;
 	min-width: 100px;
 	min-height: 400px;
-	padding: 1rem 2rem 2rem 2rem;
-	margin-top: 5rem;
+	padding: 2rem;
 	box-shadow: 0 0.5rem 2rem #222;
 	background-color: transparent;
 }
@@ -44,6 +43,7 @@ button {
 	margin: 1rem auto;
 	background: #2b93d1;
 	border: none;
+	cursor: pointer;
 }
 
 button:disabled {
@@ -53,6 +53,7 @@ button:disabled {
 
 @media (max-width: 768px) {
 	.contactForm {
-		width: 100%;
+		width: 90%;
+		margin: 10px;
 	}
 }

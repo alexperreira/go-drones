@@ -21,7 +21,13 @@ svg {
 }
 @media (max-width: 640px) {
 	.plates {
-		width: 320px;
+		width: 200px;
+	}
+
+	svg {
+		margin-top: 0.5rem;
+		height: 60px;
+		width: 60px;
 	}
 }
 .plate {
@@ -99,4 +105,7 @@ svg {
 }
 .active.plate2 .x {
 	transition: transform 400ms 250ms;
+}
+
+@media (max-width: 576px) {
 }

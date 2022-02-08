@@ -1,11 +1,19 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import bg from '../../assets/images/section2-bg.png';
+import { devices } from '../../../device';
 
 export const Section = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
+	width: 100%;
+
+	@media ${devices.tablet} {
+		width: 90%;
+		// align-self: center;
+		margin: 0 auto;
+	}
 `;
 
 export const HeroContainer = styled.div`
@@ -123,6 +131,69 @@ export const Div = styled(motion.div)`
 		font-family: 'Avenir Next Heavy';
 		font-size: inherit;
 		color: #fff;
+	}
+
+	@media ${devices.laptop} {
+		max-width: 700px;
+
+		h1 {
+			font-size: 3rem;
+		}
+
+		h2 {
+			font-size: 3rem;
+		}
+
+		p {
+			font-size: 2.5rem;
+		}
+	}
+
+	@media ${devices.tablet} {
+		max-width: 600px;
+		margin: 1rem 0;
+
+		h1 {
+			font-size: 2rem;
+		}
+
+		h2 {
+			font-size: 2rem;
+		}
+
+		p {
+			font-size: 2rem;
+		}
+	}
+	@media ${devices.tabletS} {
+		max-width: 400px;
+
+		h1 {
+			font-size: 1.5rem;
+		}
+
+		h2 {
+			font-size: 1.5rem;
+		}
+
+		p {
+			font-size: 1.5rem;
+		}
+	}
+
+	@media ${devices.mobileL} {
+		max-width: 90%;
+
+		h1 {
+			font-size: 1.2rem;
+		}
+
+		h2 {
+			font-size: 1.2rem;
+		}
+		p {
+			font-size: 1.2rem;
+		}
 	}
 
 	@media (max-width: 1200px) {

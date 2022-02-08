@@ -109,11 +109,11 @@ export const TextGroup = styled.div`
 		max-width: 370px;
 
 		h1 {
-			font-size: 1.8rem;
+			font-size: 1.6rem;
 		}
 
 		h2 {
-			font-size: 1.8rem;
+			font-size: 1.6rem;
 		}
 	}
 `;
@@ -140,13 +140,15 @@ export const Button = styled(motion.button)`
 
 	@media ${devices.tablet} {
 		font-size: 1rem;
+		width: 20rem;
 	}
 
-	@media ${devices.tabletS} {
-		font-size: 0.8rem;
-	}
+	// @media ${devices.tabletS} {
+	// 	font-size: 0.8rem;
+	// }
 
 	@media ${devices.mobileL} {
+		width: 18rem;
 		h1 {
 			font-size: 1.8rem;
 		}

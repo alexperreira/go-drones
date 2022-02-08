@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { devices } from '../../../../../../device';
 
 export const Section = styled.div`
 	display: flex;
@@ -13,7 +14,8 @@ export const Section = styled.div`
 export const Div = styled.div`
 	position: relative;
 	align-self: center;
-	width: 1000px;
+	width: 90%;
+	max-width: 1000px;
 	display: block;
 	margin: 4rem;
 	color: #fff;
@@ -34,5 +36,13 @@ export const Div = styled.div`
 	span {
 		font-family: 'Avenir Next Heavy';
 		font-size: inherit;
+	}
+
+	@media ${devices.mobileL} {
+		width: 90%;
+
+		p {
+			font-size: 1.4rem;
+		}
 	}
 `;

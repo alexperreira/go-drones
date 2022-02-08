@@ -1,9 +1,11 @@
 import styled, { css } from 'styled-components';
+import { devices } from '../../../../../../device';
 
 export const Section = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	align-items: center;
 	width: 100%;
 	/* height: 100%; */
 	background: #000;
@@ -15,42 +17,81 @@ export const Container = css`
 	align-self: center;
 	width: 100%;
 	max-width: 1200px;
-	margin: 4rem;
+	margin: 4rem 2rem;
 `;
 
 export const Grid = styled.div`
 	${Container}
 	display: grid;
 	grid-template-columns: 1fr 1fr;
+
+	@media ${devices.tablet} {
+		width: 90%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+`;
+
+export const Box = styled.div`
+	${Container}
+	display: flex;
+	flex-direction: column-reverse;
 `;
 
 export const Div = styled.div`
 	${Container}
+	display: flex;
+	flex-direction: column;
+
+	// @media ${devices.tablet} {
+	// 	div:nth-child(1n) {
+	// 		flex-direction: column-reverse;
+	// 	}
+	// }
 `;
 
 export const Image = css`
-	width: 100%;
+	width: 90%;
 	max-width: 400px;
+	min-width: 120px;
+
+	@media ${devices.laptop} {
+		width: 180px;
+	}
+
+	@media ${devices.tablet} {
+		order: 1;
+		margin: 20px;
+	}
 `;
 
 export const ImageRight = styled.div`
-	margin: 0 0 0 auto;
+	margin: 0 20px 0 auto;
 	img {
 		${Image}
+	}
+
+	@media ${devices.tablet} {
+		margin: 20px;
 	}
 `;
 
 export const ImageLeft = styled.div`
-	margin: 0 auto 0 0;
+	margin: 0 auto 0 20px;
 	img {
 		${Image}
+	}
+
+	@media ${devices.tablet} {
+		margin: 20px;
 	}
 `;
 
 export const TextGroup = styled.div`
 	align-self: center;
-
-	// width: 1000px;
+	margin-right: 0;
+	width: 90%;
 
 	h1 {
 		color: #fff;
@@ -73,6 +114,68 @@ export const TextGroup = styled.div`
 		text-align: right;
 		margin: 0;
 	}
+
+	@media ${devices.laptop} {
+		max-width: 700px;
+
+		h1 {
+			font-size: 3rem;
+		}
+
+		h2 {
+			font-size: 3rem;
+		}
+
+		p {
+			font-size: 2.5rem;
+		}
+	}
+
+	@media ${devices.tablet} {
+		max-width: 600px;
+
+		h1 {
+			font-size: 2rem;
+		}
+
+		h2 {
+			font-size: 2rem;
+		}
+
+		p {
+			font-size: 2rem;
+		}
+	}
+	@media ${devices.tabletS} {
+		max-width: 400px;
+
+		h1 {
+			font-size: 1.5rem;
+		}
+
+		h2 {
+			font-size: 1.5rem;
+		}
+
+		p {
+			font-size: 1.5rem;
+		}
+	}
+
+	@media ${devices.mobileL} {
+		max-width: 90%;
+
+		h1 {
+			font-size: 1.2rem;
+		}
+
+		h2 {
+			font-size: 1.2rem;
+		}
+		p {
+			font-size: 1.2rem;
+		}
+	}
 `;
 
 export const TextBlurb = styled.div`
@@ -81,6 +184,9 @@ export const TextBlurb = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	align-items: center;
+	align-content: center;
+	margin: 10px;
 
 	h3 {
 		font-family: 'Avenir Next Heavy';
@@ -97,5 +203,53 @@ export const TextBlurb = styled.div`
 		font-family: 'Avenir Next Heavy';
 		font-size: inherit;
 		color: #fff;
+	}
+
+	@media ${devices.laptop} {
+		max-width: 90%;
+
+		h3 {
+			font-size: 2.3rem;
+		}
+
+		p {
+			font-size: 1.5rem;
+		}
+	}
+
+	@media ${devices.tablet} {
+		max-width: 90%;
+		order: 2;
+
+		h3 {
+			font-size: 2rem;
+		}
+
+		p {
+			font-size: 1.4rem;
+		}
+	}
+	@media ${devices.tabletS} {
+		max-width: 90%;
+		flex-direction: column;
+
+		p {
+			font-size: 1.6rem;
+		}
+	}
+
+	@media ${devices.mobileL} {
+		max-width: 90%;
+
+		h1 {
+			font-size: 1.2rem;
+		}
+
+		h2 {
+			font-size: 1.2rem;
+		}
+		p {
+			font-size: 1.2rem;
+		}
 	}
 `;

@@ -122,6 +122,16 @@ export const TextGroup = styled.div`
 			font-size: 1.8rem;
 		}
 	}
+
+	@media ${devices.mobileM} {
+		width: 325px;
+		h1 {
+			// font-size: 1.2rem;
+		}
+		h2 {
+			// font-size: 1.2rem;
+		}
+	}
 `;
 
 export const LogoGroup = styled(motion.div)`

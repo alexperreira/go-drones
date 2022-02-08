@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { devices } from '../../../../../device';
 
 import goLogo from '../../../../assets/images/gologo.png';
 
@@ -91,5 +92,34 @@ export const HeroContent = styled.div`
 		text-transform: uppercase;
 		line-height: 8.5rem;
 		margin: 0;
+	}
+
+	@media ${devices.tablet} {
+		h1 {
+			font-size: 6rem;
+			line-height: 6.5rem;
+		}
+
+		h2 {
+			font-size: 6rem;
+			line-height: 6.5rem;
+		}
+	}
+
+	@media ${devices.mobileL} {
+		max-width: 90%;
+		line-height: 4.5rem;
+		h1 {
+			font-size: 4rem;
+			line-height: 4.5rem;
+		}
+
+		h2 {
+			font-size: 4rem;
+			line-height: 4.5rem;
+		}
+		p {
+			font-size: 1.2rem;
+		}
 	}
 `;

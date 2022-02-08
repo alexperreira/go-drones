@@ -3,6 +3,7 @@ import Twinfalls from '../../assets/images/section2-bg.png';
 import EDC from '../../assets/images/edc-thumbnail.png';
 import showsBg from '../../assets/images/shows-bg.jpg';
 import { AiFillPlayCircle } from 'react-icons/ai';
+import { devices } from '../../../device';
 
 const SectionStyles = css`
 	width: 100%;
@@ -20,7 +21,6 @@ export const SectionOne = styled.section`
 
 export const SectionTwo = styled.section`
 	${SectionStyles}
-	height: 100%;
 `;
 
 export const Container = styled.div`
@@ -31,10 +31,6 @@ export const Container = styled.div`
 	width: 80%;
 	height: 80%;
 	margin: 2rem;
-
-	@media (max-width: 1200px) {
-		flex-direction: column;
-	}
 `;
 
 export const Font = css`
@@ -108,8 +104,30 @@ export const PlayBtn = styled(AiFillPlayCircle)`
 
 export const Layout = styled.div`
 	display: grid;
-	grid-template-columns: 1.5fr 1fr;
-	grid-template-rows: 600px;
+	max-width: 1200px;
+	grid-template-columns: 2fr 1fr;
+	grid-template-rows: 400px;
+
+	@media ${devices.laptopL} {
+		width: 90%;
+		height: 400px;
+		grid-template-columns: 2fr 1fr;
+		grid-template-rows: 350px;
+	}
+
+	@media ${devices.laptop} {
+		grid-template-rows: 280px;
+	}
+
+	@media ${devices.tablet} {
+		width: 90%;
+		display: block;
+		height: 800px;
+	}
+
+	@media ${devices.mobileL} {
+		height: 600px;
+	}
 `;
 
 export const ColumnLeft = styled.div`
@@ -120,17 +138,35 @@ export const ColumnLeft = styled.div`
 export const ThumbnailContainer = styled.div`
 	display: block;
 	width: 100%;
-	max-height: 575px;
+	height: 100%;
+	// max-height: 575px;
 	overflow: hidden;
 	position: relative;
 	border: 1px solid #fff;
 	cursor: pointer;
+
+	@media ${devices.tablet} {
+		width: 100%;
+		height: 200px;
+		margin: 10px;
+	}
 `;
 
 const Images = css`
 	max-width: 100%;
-	max-height: calc((600px / 2) - 25.6px);
+	max-height: calc((100% / 2) - 20px);
 	border: 1px solid #fff;
+	object-fit: cover;
+
+	@media ${devices.tablet} {
+		width: calc((100% / 2) - 10px);
+		margin: 10px;
+	}
+
+	@media ${devices.tabletS} {
+		width: 100%;
+		margin: 10px;
+	}
 `;
 
 export const ColumnRight = styled.div`
@@ -150,6 +186,16 @@ export const ColumnRight = styled.div`
 	img:nth-child(2) {
 		${Images}
 		margin-top: 0.8rem;
+	}
+
+	@media ${devices.tablet} {
+		flex-direction: row;
+		margin: 0;
+	}
+
+	@media ${devices.tabletS} {
+		flex-direction: column;
+		justify-content: start;
 	}
 `;
 

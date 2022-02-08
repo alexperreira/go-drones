@@ -10,7 +10,8 @@ export const HeroContainer = styled.div`
 	min-width: 100%;
 	height: 50rem;
 	margin: 0;
-	width: 100%;
+	width: 100vw;
+	max-width: 2000px;
 	position: relative;
 	z-index: 2;
 
@@ -21,6 +22,7 @@ export const HeroContainer = styled.div`
 		left: 0;
 		right: 0;
 		bottom: 0;
+		width: 100%;
 		background: linear-gradient(
 				180deg,
 				rgba(0, 0, 0, 0) 0%,
@@ -39,12 +41,13 @@ export const HeroBg = styled.div`
 	bottom: 0;
 	left: 0;
 	min-width: 1024px;
+	width: 100vw;
 	min-height: 100%;
 	overflow: hidden;
 `;
 
 export const VideoBg = styled.video`
-	min-width: 1024px;
+	// min-width: 1024px;
 	width: 100%;
 	min-height: 100%;
 	-o-object-fit: cover;
@@ -60,20 +63,22 @@ export const VideoBg = styled.video`
 
 export const Font = css`
 	color: #fff;
-	font-size: clamp(6rem, 8vw, 10rem);
+	font-size: 10rem;
 	font-family: 'Avenir Next Heavy';
 	text-align: left;
 	text-transform: uppercase;
-	line-height: clamp(6.5rem, 8vw, 8.5rem);
+	line-height: 10.5rem;
 	margin: 0;
 `;
 
 export const HeroContent = styled.div`
 	z-index: 3;
 	max-width: 1200px;
+	width: 100vw;
 	position: absolute;
 	padding: 0.5rem 1.5rem;
 	margin-left: 1.5rem;
+	overflow: hidden;
 
 	h1 {
 		${Font}
@@ -89,13 +94,32 @@ export const HeroContent = styled.div`
 
 	@media ${devices.tablet} {
 		h1 {
-			font-size: 8rem;
+			font-size: 6rem;
+			line-height: 6.5rem;
 		}
 
 		h2 {
-			font-size: 8rem;
+			font-size: 6rem;
+			line-height: 6.5rem;
 		}
-	} ;
+	}
+
+	@media ${devices.mobileL} {
+		max-width: 90%;
+		line-height: 4.5rem;
+		h1 {
+			font-size: 4rem;
+			line-height: 4.5rem;
+		}
+
+		h2 {
+			font-size: 4rem;
+			line-height: 4.5rem;
+		}
+		p {
+			font-size: 1.2rem;
+		}
+	}
 `;
 
 export const H2Wrapper = styled.div`
@@ -115,6 +139,12 @@ export const H2Wrapper = styled.div`
 	@media ${devices.tablet} {
 		h2 {
 			font-size: 1.2rem;
+		}
+	}
+
+	@media ${devices.mobileL} {
+		h2 {
+			font-size: 1rem;
 		}
 	}
 `;
