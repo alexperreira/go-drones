@@ -52,10 +52,31 @@ const Wrapper = styled.div`
 
 const Position = styled.div`
 	position: absolute;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
+`;
+
+const Container = styled.div`
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: left;
+	width: 700px;
+	height: 400px;
+
+	h3 {
+		font-family: 'Avenir Next Regular';
+		font-size: 1rem;
+		color: #fff;
+	}
 `;
 
 const CloseButton = styled(IoCloseOutline)`
@@ -65,9 +86,9 @@ const CloseButton = styled(IoCloseOutline)`
 	position: absolute;
 `;
 
-const portalElement = document.getElementById('overlays');
+const portalElement = document.getElementById('success');
 
-const Modal = ({ open, children, onClose }) => {
+const SuccessModal = ({ open, children, onClose }) => {
 	if (!open) return null;
 
 	return ReactDOM.createPortal(
@@ -76,8 +97,12 @@ const Modal = ({ open, children, onClose }) => {
 			<ModalContainer>
 				<Wrapper>
 					<Position>
-						<CloseButton onClick={onClose} />
-						{children}
+						<Container>
+							<h3>
+								Thank you for reaching out! You will be hearing from us soon!
+							</h3>
+							<CloseButton onClick={onClose} />
+						</Container>
 					</Position>
 				</Wrapper>
 			</ModalContainer>
@@ -86,4 +111,4 @@ const Modal = ({ open, children, onClose }) => {
 	);
 };
 
-export default Modal;
+export default SuccessModal;
