@@ -4,9 +4,11 @@ import { devices } from '../../../../../../device';
 
 export const Section = styled.div`
 	// min-width: 100%;
+	position: relative;
 	width: 100vw;
 	height: 50rem;
 	margin-top: -1.3rem;
+	background: #000;
 	background: url(${bg});
 	background-position: bottom center;
 	background-size: cover;

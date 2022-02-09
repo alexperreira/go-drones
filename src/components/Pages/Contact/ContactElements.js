@@ -64,7 +64,6 @@ export const HeroContent = styled.div`
 		font-family: 'Avenir Next Heavy';
 		text-align: left;
 		text-transform: uppercase;
-		line-height: 8.5rem;
 		margin: 0;
 	}
 
@@ -74,7 +73,6 @@ export const HeroContent = styled.div`
 		font-family: 'Avenir Next Heavy';
 		text-align: left;
 		text-transform: uppercase;
-		line-height: 8.5rem;
 		margin: 0;
 		background-clip: text;
 		-webkit-background-clip: text;
@@ -85,12 +83,20 @@ export const HeroContent = styled.div`
 	@media (max-width: 1200px) {
 		h1 {
 			font-size: 5rem;
-			line-height: 5.5rem;
 		}
 
 		h2 {
 			font-size: 5rem;
-			line-height: 5.5rem;
+		}
+	}
+
+	@media (max-width: 375px) {
+		h1 {
+			font-size: 4rem;
+		}
+
+		h2 {
+			font-size: 4rem;
 		}
 	}
 `;

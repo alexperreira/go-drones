@@ -1,5 +1,5 @@
 .container {
-	margin-right: 40px;
+	/* margin-right: 40px; */
 }
 
 /* .topLine {
@@ -14,11 +14,12 @@
 .input {
 	background: transparent;
 	border: 1px solid #808080;
-	margin: 1rem auto;
+	margin: 1rem 2rem;
 	padding: 0.5rem;
 	height: 2rem;
-	width: 100%;
+	width: 100px;
 	color: #808080;
+	width: 50%;
 }
 
 .contactForm {
@@ -53,7 +54,12 @@ button:disabled {
 
 @media (max-width: 768px) {
 	.contactForm {
-		width: 90%;
-		margin: 10px;
+		width: 80%;
+		margin: 10px auto;
+	}
+
+	.input {
+		width: 80%;
+		margin: 10px auto;
 	}
 }

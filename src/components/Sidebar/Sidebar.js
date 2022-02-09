@@ -48,7 +48,7 @@ const Sidebar = () => {
 	return (
 		<>
 			<nav className={styles.nav}>
-				<a href='tel:2082290300'>
+				<a href='tel:2082290300' className={styles.phoneNumber}>
 					<img
 						className={styles.phone}
 						src={phoneIcon}

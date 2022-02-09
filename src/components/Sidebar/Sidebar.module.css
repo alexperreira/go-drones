@@ -3,7 +3,7 @@
 	position: fixed;
 	top: 0;
 	right: 0;
-	/* width: 100%; */
+	/* width: 100vw; */
 	display: flex;
 	/* flex-direction: column; */
 	align-items: center;
@@ -12,6 +12,7 @@
 	margin: 0 2.5rem;
 	/* padding: 0 calc((100vw - 1300px) / 2); */
 	z-index: 10;
+	overflow: hidden;
 }
 
 .logo {
@@ -36,6 +37,7 @@
 	display: flex;
 	/* justify-content: flex-start; */
 	align-items: center;
+	overflow: hidden;
 }
 
 .icon {
@@ -124,10 +126,11 @@ ul {
 	}
 }
 
-@media (max-width: 576px) {
+@media (max-width: 600px) {
 	.nav {
 		flex-direction: column-reverse;
-		align-items: end;
+		align-items: flex-end;
+		right: 0;
 	}
 
 	.sidebar {
@@ -142,5 +145,25 @@ ul {
 		font-size: 0.8rem;
 		width: 6rem;
 		height: 2rem;
+	}
+}
+
+@media (max-width: 425px) {
+	.nav {
+		/* margin-right: -10px; */
+		right: 0;
+	}
+
+	.logo {
+		height: 40px;
+	}
+
+	.button {
+		font-size: 0.7rem;
+		width: 5rem;
+	}
+
+	.phoneNumber {
+		font-size: 0.5rem;
 	}
 }

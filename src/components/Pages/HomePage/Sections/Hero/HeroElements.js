@@ -3,17 +3,19 @@ import { motion } from 'framer-motion';
 import { devices } from '../../../../../device';
 
 export const HeroContainer = styled.div`
-	background: #fff;
+	background: #000;
 	display: flex;
 	justify-content: left;
 	align-items: center;
 	// min-width: 100%;
 	height: 50rem;
 	margin: 0;
-	width: 100vw;
+	width: 100%;
 	max-width: 2000px;
 	position: relative;
 	z-index: 2;
+	// overflow-x: hidden;
+	// overflow-y: hidden;
 
 	&::before {
 		content: '';
@@ -30,6 +32,16 @@ export const HeroContainer = styled.div`
 			),
 			linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, transparent 100%);
 		z-index: 3;
+	}
+
+	@media ${devices.tablet} {
+		max-width: 768px;
+		width: 100%;
+	}
+
+	@media ${devices.mobileL} {
+		max-width: 425px;
+		width: 100%;
 	}
 `;
 
@@ -69,7 +81,7 @@ export const Font = css`
 	font-family: 'Avenir Next Heavy';
 	text-align: left;
 	text-transform: uppercase;
-	line-height: 10.5rem;
+	// line-height: 10.5rem;
 	margin: 0;
 `;
 
@@ -80,7 +92,7 @@ export const HeroContent = styled.div`
 	position: absolute;
 	padding: 0.5rem 1.5rem;
 	margin-left: 1.5rem;
-	overflow: hidden;
+	overflow-y: hidden;
 
 	h1 {
 		${Font}
@@ -103,6 +115,15 @@ export const HeroContent = styled.div`
 		h2 {
 			font-size: 6rem;
 			line-height: 6.5rem;
+		}
+	}
+
+	@media ${devices.tabletS} {
+		h1 {
+			font-size: 5rem;
+		}
+		h2 {
+			font-size: 5rem;
 		}
 	}
 

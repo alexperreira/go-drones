@@ -76,7 +76,7 @@ export const HeroContent = styled.div`
 		font-family: 'Avenir Next Heavy';
 		text-align: left;
 		text-transform: uppercase;
-		line-height: 8.5rem;
+		// line-height: 8.5rem;
 		margin: 0;
 	}
 
@@ -90,36 +90,59 @@ export const HeroContent = styled.div`
 		-webkit-text-fill-color: transparent;
 		-webkit-text-stroke: 2px white;
 		text-transform: uppercase;
-		line-height: 8.5rem;
+		// line-height: 8.5rem;
 		margin: 0;
+	}
+
+	@media ${devices.laptopL} {
+		h1 {
+			font-size: 8rem;
+		}
+
+		h2 {
+			font-size: 8rem;
+		}
 	}
 
 	@media ${devices.tablet} {
 		h1 {
 			font-size: 6rem;
-			line-height: 6.5rem;
 		}
 
 		h2 {
 			font-size: 6rem;
-			line-height: 6.5rem;
+		}
+	}
+
+	@media ${devices.tabletS} {
+		h1 {
+			font-size: 4.5rem;
+		}
+
+		h2 {
+			font-size: 4.5rem;
 		}
 	}
 
 	@media ${devices.mobileL} {
 		max-width: 90%;
-		line-height: 4.5rem;
 		h1 {
-			font-size: 4rem;
-			line-height: 4.5rem;
+			font-size: 3.8rem;
 		}
 
 		h2 {
-			font-size: 4rem;
-			line-height: 4.5rem;
+			font-size: 3.8rem;
 		}
-		p {
-			font-size: 1.2rem;
+	}
+
+	@media ${devices.mobileM} {
+		max-width: 90%;
+		h1 {
+			font-size: 3.2rem;
+		}
+
+		h2 {
+			font-size: 3.2rem;
 		}
 	}
 `;

@@ -23,7 +23,7 @@
 body {
 	margin: 0;
 	box-sizing: border-box;
-	width: 100%;
+	width: 100vw;
 	height: 100%;
 	font-family: 'Avenir Next Regular';
 	background: #010606;

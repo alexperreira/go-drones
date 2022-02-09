@@ -121,7 +121,8 @@ export const Layout = styled.div`
 
 	@media ${devices.tablet} {
 		width: 90%;
-		display: block;
+		display: flex;
+		flex-direction: column;
 		height: 800px;
 	}
 
@@ -146,9 +147,14 @@ export const ThumbnailContainer = styled.div`
 	cursor: pointer;
 
 	@media ${devices.tablet} {
-		width: 100%;
+		width: 96%;
 		height: 200px;
 		margin: 10px;
+	}
+
+	@media ${devices.mobileM} {
+		width: 90%;
+		align-self: center;
 	}
 `;
 
@@ -160,12 +166,18 @@ const Images = css`
 
 	@media ${devices.tablet} {
 		width: calc((100% / 2) - 10px);
+		// width: 96%;
 		margin: 10px;
 	}
 
 	@media ${devices.tabletS} {
-		width: 100%;
+		width: 96%;
 		margin: 10px;
+	}
+
+	@media ${devices.mobileM} {
+		width: 90%;
+		align-self: center;
 	}
 `;
 
