@@ -7,7 +7,7 @@ export const HeroContainer = styled.div`
 	display: flex;
 	justify-content: left;
 	align-items: center;
-	min-width: 100%;
+	// min-width: 100%;
 	height: 50rem;
 	margin: 0;
 	width: 100vw;
@@ -40,7 +40,7 @@ export const HeroBg = styled.div`
 	right: 0;
 	bottom: 0;
 	left: 0;
-	min-width: 1024px;
+	// min-width: 1024px;
 	width: 100vw;
 	min-height: 100%;
 	overflow: hidden;
@@ -48,16 +48,18 @@ export const HeroBg = styled.div`
 
 export const VideoBg = styled.video`
 	// min-width: 1024px;
-	width: 100%;
+	// width: 100%;
+	max-width: 100%;
 	min-height: 100%;
 	-o-object-fit: cover;
 	object-fit: cover;
 	background: #232342;
 	position: relative;
+	overflow: hidden;
 
 	@media (max-width: 1024px) {
-		left: 50%;
-		margin-left: -512px;
+		// left: 50%;
+		// margin-left: -512px;
 	}
 `;
 
