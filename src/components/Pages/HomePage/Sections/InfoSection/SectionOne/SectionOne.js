@@ -17,36 +17,36 @@ const fadeUp = {
 };
 
 const SectionOne = () => {
-	const controls = useAnimation();
-	const { ref, inView } = useInView();
+	// const controls = useAnimation();
+	// const { ref, inView } = useInView();
 
-	useEffect(() => {
-		if (inView) {
-			controls.start('visible');
-		}
-		if (!inView) {
-			controls.start('hidden');
-		}
-	}, [controls, inView]);
+	// useEffect(() => {
+	// 	if (inView) {
+	// 		controls.start('visible');
+	// 	}
+	// 	if (!inView) {
+	// 		controls.start('hidden');
+	// 	}
+	// }, [controls, inView]);
 
 	return (
 		<Section>
 			<BgOverlay>
 				<TextGroup>
 					<motion.h1
-						ref={ref}
+						// ref={ref}
 						variants={fadeRight}
 						initial='hidden'
-						animate={controls}
+						animate='visible'
 						transition={{ duration: 1, delay: 0.2 }}
 					>
 						Experience the night sky
 					</motion.h1>
 					<motion.h2
-						ref={ref}
+						// ref={ref}
 						variants={fadeLeft}
 						initial='hidden'
-						animate={controls}
+						animate='visible'
 						transition={{ duration: 1, delay: 0.4 }}
 					>
 						Like never before
@@ -55,10 +55,10 @@ const SectionOne = () => {
 
 				<TextGroup>
 					<motion.p
-						ref={ref}
+						// ref={ref}
 						variants={fadeUp}
 						initial='hidden'
-						animate={controls}
+						animate='visible'
 						transition={{ duration: 1, delay: 0.6 }}
 					>
 						Our <span>cutting-edge technology </span>

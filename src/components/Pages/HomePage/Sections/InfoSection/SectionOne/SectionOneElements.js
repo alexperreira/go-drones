@@ -127,6 +127,7 @@ export const TextGroup = styled.div`
 
 	@media ${devices.mobileL} {
 		max-width: 90%;
+		color: #fff;
 
 		h1 {
 			font-size: 1.2rem;
