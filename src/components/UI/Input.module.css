@@ -8,6 +8,7 @@
 label {
 	color: #808080;
 	text-transform: capitalize;
+	margin-left: 0.5rem;
 }
 
 .input {
@@ -16,12 +17,23 @@ label {
 	margin: 1rem auto;
 	padding: 0.5rem;
 	height: 2rem;
-	width: 100%;
+	width: 95%;
 	color: #808080;
 }
 
-.input:nth-child(4n) {
-	height: 5rem;
+/* Chrome/Opera/Safari */
+
+::-webkit-input-placeholder {
+	white-space: pre-line;
+	position: relative;
+	top: -7px;
+}
+
+/* Firefox */
+::-moz-placeholder {
+	white-space: pre-line;
+	position: relative;
+	top: -7px;
 }
 
 .error {

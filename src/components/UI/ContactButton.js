@@ -25,6 +25,7 @@ const Button = styled(motion.button)`
 	width: 20rem;
 	align-self: center;
 	cursor: pointer;
+	overflow: hidden;
 `;
 
 const ContactButton = () => {

@@ -13,6 +13,7 @@ export const Section = styled.div`
 	background-size: cover;
 	background-repeat: no-repeat;
 	z-index: 1;
+	overflow: hidden;
 `;
 
 export const BgOverlay = styled.div`
@@ -36,6 +37,7 @@ export const TextGroup = styled.div`
 	align-self: center;
 	width: 1000px;
 	text-align: center;
+	overflow: hidden;
 
 	h1 {
 		color: #fff;
@@ -133,6 +135,7 @@ export const Button = styled(motion.button)`
 	margin: 4rem 2rem 0 2rem;
 	border: none;
 	width: 35rem;
+	overflow: hidden;
 
 	@media ${devices.laptop} {
 		font-size: 1.5rem;

@@ -14,6 +14,7 @@ export const Section = styled.div`
 	background-size: cover;
 	background-repeat: no-repeat;
 	z-index: 1;
+	overflow: hidden;
 
 	@media ${devices.tablet} {
 		width: 100vw;
@@ -42,6 +43,7 @@ export const BgOverlay = styled.div`
 export const TextGroup = styled.div`
 	align-self: center;
 	width: 1000px;
+	overflow: hidden;
 
 	h1 {
 		color: #fff;
@@ -127,7 +129,7 @@ export const TextGroup = styled.div`
 
 	@media ${devices.mobileL} {
 		max-width: 90%;
-		color: #fff;
+		overflow: hidden;
 
 		h1 {
 			font-size: 1.2rem;

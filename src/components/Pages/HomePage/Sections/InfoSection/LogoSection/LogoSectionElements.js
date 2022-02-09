@@ -19,6 +19,7 @@ export const Section = styled.div`
 	background-size: cover;
 	background-repeat: no-repeat;
 	z-index: 1;
+	overflow: hidden;
 `;
 
 export const BgOverlay = styled.div`
@@ -136,6 +137,7 @@ export const TextGroup = styled.div`
 
 export const LogoGroup = styled(motion.div)`
 	display: flex;
+	overflow: hidden;
 
 	@media ${devices.mobileL} {
 		flex-direction: column;

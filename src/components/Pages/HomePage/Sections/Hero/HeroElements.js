@@ -15,7 +15,7 @@ export const HeroContainer = styled.div`
 	position: relative;
 	z-index: 2;
 	// overflow-x: hidden;
-	// overflow-y: hidden;
+	overflow-y: hidden;
 
 	&::before {
 		content: '';
@@ -92,8 +92,7 @@ export const HeroContent = styled.div`
 	position: absolute;
 	padding: 0.5rem 1.5rem;
 	margin-left: 1.5rem;
-	overflow-y: hidden;
-
+	overflow: hidden;
 	h1 {
 		${Font}
 	}

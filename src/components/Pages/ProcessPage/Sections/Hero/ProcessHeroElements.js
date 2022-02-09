@@ -69,6 +69,7 @@ export const HeroContent = styled.div`
 	position: absolute;
 	padding: 8px 24px;
 	margin-left: 24px;
+	overflow: hidden;
 
 	h1 {
 		color: #fff;

@@ -10,6 +10,7 @@ export const Section = styled.div`
 	background-size: cover;
 	background-repeat: no-repeat;
 	z-index: 1;
+	overflow: hidden;
 `;
 
 export const BgOverlay = styled.div`
@@ -36,6 +37,7 @@ export const BgOverlay = styled.div`
 export const TextGroup = styled.div`
 	align-self: center;
 	width: 1000px;
+	overflow: hidden;
 
 	h1 {
 		color: #fff;

@@ -9,6 +9,7 @@ export const Section = styled.div`
 	/* height: 100%; */
 	background: #000;
 	z-index: 1;
+	overflow: hidden;
 `;
 
 export const Div = styled.div`
@@ -20,6 +21,7 @@ export const Div = styled.div`
 	margin: 4rem;
 	color: #fff;
 	text-align: center;
+	overflow: hidden;
 
 	h3 {
 		font-family: 'Avenir Next Heavy';
