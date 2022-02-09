@@ -1,6 +1,5 @@
-import React, { useEffect } from 'react';
-import { motion, useAnimation } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
+import React from 'react';
+import { motion } from 'framer-motion';
 import { Section, BgOverlay, TextGroup } from './SectionOneElements';
 
 const fadeRight = {
@@ -17,24 +16,23 @@ const fadeUp = {
 };
 
 const SectionOne = () => {
-	const controls = useAnimation();
-	const { ref, inView } = useInView();
+	// const controls = useAnimation();
+	// const { ref, inView } = useInView();
 
-	useEffect(() => {
-		if (inView) {
-			controls.start('visible');
-		}
-		if (!inView) {
-			controls.start('hidden');
-		}
-	}, [controls, inView]);
+	// useEffect(() => {
+	// 	if (inView) {
+	// 		controls.start('visible');
+	// 	}
+	// 	if (!inView) {
+	// 		controls.start('hidden');
+	// 	}
+	// }, [controls, inView]);
 
 	return (
 		<Section>
 			<BgOverlay>
 				<TextGroup>
 					<motion.h1
-						ref={ref}
 						variants={fadeRight}
 						initial='hidden'
 						animate='visible'
@@ -43,7 +41,6 @@ const SectionOne = () => {
 						Experience the night sky
 					</motion.h1>
 					<motion.h2
-						ref={ref}
 						variants={fadeLeft}
 						initial='hidden'
 						animate='visible'
@@ -55,7 +52,6 @@ const SectionOne = () => {
 
 				<TextGroup>
 					<motion.p
-						// ref={ref}
 						variants={fadeUp}
 						initial='hidden'
 						animate='visible'
