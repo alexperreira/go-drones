@@ -129,6 +129,7 @@ const Contact = () => {
 					</motion.p>
 					<motion.p
 						// ref={ref2}
+						style={{ marginBottom: '4rem' }}
 						variants={fadeUp}
 						initial='hidden'
 						animate={controls}
@@ -159,7 +160,6 @@ const Contact = () => {
 				</Div>
 			</Section>
 			<Section>
-				{/* <div id='form' style={{}}></div> */}
 				<ContactForm id='form' />
 			</Section>
 		</>

@@ -171,13 +171,6 @@ export const H2Wrapper = styled.div`
 	}
 `;
 
-// export const HeroH2 = styled.h2`
-// 	color: #fff;
-// 	text-transform: uppercase;
-// 	font-family: 'Avenir Next Thin';
-// 	font-size: 1.5rem;
-// `;
-
 export const Slash = styled(motion.h3)`
 	display: inline-block;
 	color: #2b93d1;

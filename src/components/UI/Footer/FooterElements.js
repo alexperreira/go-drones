@@ -29,6 +29,7 @@ export const IconGroup = styled.div`
 		color: #404040;
 		font-size: 1.5rem;
 		width: 50px;
+		cursor: pointer;
 	}
 
 	svg {

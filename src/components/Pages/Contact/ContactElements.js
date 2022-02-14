@@ -8,6 +8,7 @@ export const Section = styled.div`
 	flex-direction: column;
 	justify-content: space-around;
 	width: 100%;
+	margin: 2rem 0;
 
 	@media ${devices.tablet} {
 		width: 90%;
@@ -105,14 +106,15 @@ export const Div = styled(motion.div)`
 	align-self: center;
 	width: 1000px;
 	z-index: 5;
+	// margin: 2rem;
 
 	h1 {
 		color: #fff;
 		font-family: 'Avenir Next Heavy';
 		font-size: 3.5rem;
 		text-transform: uppercase;
-		margin: 0;
 		word-wrap: nowrap;
+		margin: 2rem 0;
 	}
 
 	h2 {
@@ -123,7 +125,7 @@ export const Div = styled(motion.div)`
 		-webkit-text-fill-color: transparent;
 		-webkit-text-stroke: 2px #fff;
 		text-transform: uppercase;
-		margin: 0;
+		margin: 2rem 0;
 		text-align: right;
 	}
 
@@ -131,6 +133,7 @@ export const Div = styled(motion.div)`
 		font-family: 'Avenir Next Regular';
 		font-size: 2.5rem;
 		color: #fff;
+		margin: 2.5rem 0;
 	}
 
 	span {

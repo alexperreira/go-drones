@@ -3,11 +3,10 @@ import bg from '../../../../../assets/images/section1-bg.png';
 import { devices } from '../../../../../../device';
 
 export const Section = styled.div`
-	// min-width: 100%;
 	position: relative;
 	width: 100vw;
 	height: 50rem;
-	margin-top: -1.3rem;
+	// margin-top: -1.3rem;
 	background: #000;
 	background: url(${bg});
 	background-position: bottom center;
@@ -22,9 +21,11 @@ export const Section = styled.div`
 `;
 
 export const BgOverlay = styled.div`
+	position: absolute;
+	top: 0;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-around;
+	justify-content: center;
 	background: linear-gradient(
 			180deg,
 			rgba(0, 0, 0, 0) 0%,
@@ -44,6 +45,7 @@ export const TextGroup = styled.div`
 	align-self: center;
 	width: 1000px;
 	overflow: hidden;
+	margin: 2rem;
 
 	h1 {
 		color: #fff;

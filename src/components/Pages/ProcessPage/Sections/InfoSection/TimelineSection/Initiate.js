@@ -37,7 +37,7 @@ const Initiate = () => {
 	}, [controls, inView]);
 	return (
 		<Section>
-			<TextGroup>
+			<TextGroup style={{ maxWidth: '1200px' }}>
 				<motion.h1
 					ref={ref}
 					variants={fadeRight}

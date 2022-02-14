@@ -19,7 +19,7 @@ export const Section = styled.div`
 export const BgOverlay = styled.div`
 	display: flex;
 	flex-direction: column;
-	justify-content: space-around;
+	justify-content: center;
 	background: linear-gradient(
 			180deg,
 			rgba(0, 0, 0, 0.6) 0%,

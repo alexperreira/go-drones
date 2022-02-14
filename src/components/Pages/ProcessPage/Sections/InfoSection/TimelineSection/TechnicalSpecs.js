@@ -28,7 +28,6 @@ const TechnicalSpecs = () => {
 		}
 	}, [controls, inView]);
 	return (
-		// <Section>
 		<Section>
 			<Div>
 				<TextGroup>
@@ -102,7 +101,6 @@ const TechnicalSpecs = () => {
 				</TextGroup>
 			</Div>
 		</Section>
-		// </Section>
 	);
 };
 

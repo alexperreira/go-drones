@@ -16,7 +16,7 @@ export const Container = css`
 	position: relative;
 	align-self: center;
 	width: 100%;
-	max-width: 1200px;
+	max-width: 1400px;
 	margin: 4rem 2rem;
 `;
 
@@ -43,6 +43,7 @@ export const Div = styled.div`
 	${Container}
 	display: flex;
 	flex-direction: column;
+	// margin: 0;
 
 	// @media ${devices.tablet} {
 	// 	div:nth-child(1n) {
@@ -92,6 +93,8 @@ export const TextGroup = styled.div`
 	align-self: center;
 	margin-right: 0;
 	width: 90%;
+	display: flex;
+	flex-direction: column;
 
 	h1 {
 		color: #fff;
@@ -99,7 +102,7 @@ export const TextGroup = styled.div`
 		font-size: 4rem;
 		text-align: left;
 		text-transform: uppercase;
-		margin: 0;
+		margin-left: 2rem;
 		word-wrap: nowrap;
 	}
 
@@ -112,7 +115,7 @@ export const TextGroup = styled.div`
 		-webkit-text-stroke: 2px #fff;
 		text-transform: uppercase;
 		text-align: right;
-		margin: 0;
+		margin-right: 2rem;
 	}
 
 	@media ${devices.laptop} {

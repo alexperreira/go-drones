@@ -16,7 +16,7 @@ export const Section = styled.div`
 export const BgOverlay = styled.div`
 	display: flex;
 	flex-direction: column;
-	justify-content: space-around;
+	justify-content: center;
 	background: linear-gradient(
 			180deg,
 			rgba(0, 0, 0, 0) 0%,
@@ -38,6 +38,7 @@ export const TextGroup = styled.div`
 	align-self: center;
 	width: 1000px;
 	overflow: hidden;
+	margin: 2rem;
 
 	h1 {
 		color: #fff;

@@ -80,6 +80,7 @@ const Shows = () => {
 				</Container>
 				<Modal open={isOpenOne} onClose={() => setIsOpenOne(false)}>
 					<ReactPlayer
+						style={{ overflow: 'hidden' }}
 						width='100%'
 						height='100%'
 						url='https://www.youtube.com/watch?v=lAfRNeHMZNU'

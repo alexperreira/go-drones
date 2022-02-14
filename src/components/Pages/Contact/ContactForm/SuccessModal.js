@@ -88,7 +88,7 @@ const CloseButton = styled(IoCloseOutline)`
 
 const portalElement = document.getElementById('success');
 
-const SuccessModal = ({ open, children, onClose }) => {
+const SuccessModal = ({ open, onClose }) => {
 	if (!open) return null;
 
 	return ReactDOM.createPortal(

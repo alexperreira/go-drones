@@ -30,12 +30,16 @@ const ModalContainer = styled.div`
 	position: fixed;
 	top: 20vh;
 	left: 0;
+	width: 100%;
+	// height: 100%;
 	align-self: center;
 	padding: 1rem;
 	// border-radius: 14px;
 	box-shadow: 0 2px 8px rgba(255, 255, 255, 0.25);
 	z-index: 100;
 	animation: ${animation} 300ms ease-out forwards;
+	overflow: hidden;
+	scrollbar: hidden;
 
 	@media (min-width: 768px) {
 		width: 40rem;
@@ -48,6 +52,14 @@ const Wrapper = styled.div`
 	// padding-top: 56.25%;
 	padding-top: calc(720 / 1280 * 100%);
 	overflow: hidden;
+	width: 100%;
+	height: 100%;
+	scrollbar: hidden;
+
+	::-webkit-scrollbar {
+		display: none;
+		width: 0px;
+	}
 `;
 
 const Position = styled.div`
@@ -56,6 +68,13 @@ const Position = styled.div`
 	left: 0;
 	width: 100%;
 	height: 100%;
+	overflow: hidden;
+	scrollbar: hidden;
+
+	::-webkit-scrollbar {
+		display: none;
+		width: 0px;
+	}
 `;
 
 const CloseButton = styled(IoCloseOutline)`

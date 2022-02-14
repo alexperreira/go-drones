@@ -31,6 +31,7 @@ export const Container = styled.div`
 	width: 80%;
 	height: 80%;
 	margin: 2rem;
+	overflow: hidden;
 `;
 
 export const Font = css`
@@ -40,6 +41,7 @@ export const Font = css`
 	text-transform: uppercase;
 	line-height: clamp(4.5rem, 8vw, 8.5rem);
 	margin: 0;
+	overflow: hidden;
 `;
 
 export const Hero = styled.div`
@@ -54,6 +56,7 @@ export const Hero = styled.div`
 	min-width: 100%;
 	height: 100%;
 	margin: 0;
+	overflow: hidden;
 
 	&::before {
 		content: '';
@@ -83,6 +86,8 @@ export const Headline = styled.div`
 	width: 80%;
 	position: relative;
 	z-index: 2;
+	overflow-y: hidden;
+	scrollbar: hidden;
 
 	h1 {
 		${Font}
@@ -107,6 +112,8 @@ export const Layout = styled.div`
 	max-width: 1200px;
 	grid-template-columns: 2fr 1fr;
 	grid-template-rows: 400px;
+	overflow: hidden;
+	padding: 2px;
 
 	@media ${devices.laptopL} {
 		width: 90%;
@@ -160,7 +167,7 @@ export const ThumbnailContainer = styled.div`
 
 const Images = css`
 	max-width: 100%;
-	max-height: calc((100% / 2) - 20px);
+	height: calc((100% / 2) - 20px);
 	border: 1px solid #fff;
 	object-fit: cover;
 
@@ -189,6 +196,7 @@ export const ColumnRight = styled.div`
 	height: 100%;
 	max-height: 575px;
 	justify-content: space-between;
+	overflow: hidden;
 
 	img:nth-child(1) {
 		${Images}

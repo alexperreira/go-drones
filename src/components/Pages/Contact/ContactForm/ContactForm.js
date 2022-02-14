@@ -6,6 +6,7 @@ import styles from './ContactForm.module.css';
 import SuccessModal from './SuccessModal';
 
 const ContactForm = (props) => {
+	const [isOpen, setIsOpen] = useState(false);
 	const [success, setSuccess] = useState(false);
 	const { renderFormInputs, isFormValid } = useForm(contactForm);
 
@@ -17,7 +18,9 @@ const ContactForm = (props) => {
 
 	return (
 		<>
-			{success && <SuccessModal />}
+			{success && (
+				<SuccessModal open={isOpen} onClose={() => setIsOpen(false)} />
+			)}
 			<div className={styles.container}>
 				<form
 					className={styles.contactForm}
