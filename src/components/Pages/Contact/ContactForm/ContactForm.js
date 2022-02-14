@@ -23,6 +23,7 @@ const ContactForm = (props) => {
 			)}
 			<div className={styles.container}>
 				<form
+					onSubmit={setIsOpen(true)}
 					className={styles.contactForm}
 					name='contactform'
 					method='POST'
