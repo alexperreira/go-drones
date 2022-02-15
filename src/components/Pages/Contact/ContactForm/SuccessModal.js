@@ -11,6 +11,7 @@ const Backdrop = styled.div`
 	height: 100vh;
 	z-index: 100;
 	background: rgba(0, 0, 0, 0.5);
+	display: ${({ success }) => (success ? 'block' : 'none')};
 `;
 
 const animation = css`
@@ -36,6 +37,7 @@ const ModalContainer = styled.div`
 	box-shadow: 0 2px 8px rgba(255, 255, 255, 0.25);
 	z-index: 100;
 	animation: ${animation} 300ms ease-out forwards;
+	display: ${({ success }) => (success ? 'block' : 'none')};
 
 	@media (min-width: 768px) {
 		width: 40rem;
@@ -86,15 +88,15 @@ const CloseButton = styled(IoCloseOutline)`
 	position: absolute;
 `;
 
-const portalElement = document.getElementById('success');
+// const portalElement = document.getElementById('success');
 
-const SuccessModal = ({ open, onClose }) => {
+const SuccessModal = ({ open, success, onClose }) => {
 	if (!open) return null;
 
-	return ReactDOM.createPortal(
+	return (
 		<>
-			<Backdrop />
-			<ModalContainer>
+			<Backdrop success={success} />
+			<ModalContainer success={success}>
 				<Wrapper>
 					<Position>
 						<Container>
@@ -106,8 +108,8 @@ const SuccessModal = ({ open, onClose }) => {
 					</Position>
 				</Wrapper>
 			</ModalContainer>
-		</>,
-		portalElement
+		</>
+		// portalElement
 	);
 };
 

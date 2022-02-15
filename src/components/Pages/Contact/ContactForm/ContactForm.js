@@ -10,6 +10,11 @@ const ContactForm = (props) => {
 	const [success, setSuccess] = useState(false);
 	const { renderFormInputs, isFormValid } = useForm(contactForm);
 
+	// const handleSubmit = (event) => {
+	// 	event.preventDefault();
+	// 	setIsOpen(true);
+	// 	setSuccess(true);
+	// };
 	useEffect(() => {
 		if (window.location.search.includes('sucess=true')) {
 			setSuccess(true);
@@ -19,11 +24,15 @@ const ContactForm = (props) => {
 	return (
 		<>
 			{success && (
-				<SuccessModal open={isOpen} onClose={() => setIsOpen(false)} />
+				<SuccessModal
+					success={success}
+					open={isOpen}
+					onClose={() => setIsOpen(false)}
+				/>
 			)}
 			<div className={styles.container}>
 				<form
-					onSubmit={setIsOpen(true)}
+					// onSubmit={console.log('hello')}
 					className={styles.contactForm}
 					name='contactform'
 					method='POST'
