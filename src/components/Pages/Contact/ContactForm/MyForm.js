@@ -47,19 +47,17 @@ const MyForm = () => {
 					message: '',
 				}}
 				validationSchema={Yup.object({
-					name: Yup.object({
-						firstName: Yup.string()
-							.max(25, 'Must be 25 characters or less')
-							.required('Required'),
-						// !Check to see if input needs to be string or number
-						phone: Yup.number()
-							.max(12, 'Must be 12 characters or less')
-							.required('Required'),
-						email: Yup.string()
-							.email('Invalid email address')
-							.required('Required'),
-						message: Yup.string(),
-					}),
+					name: Yup.string()
+						.max(25, 'Must be 25 characters or less')
+						.required('Required'),
+					// !Check to see if input needs to be string or number
+					phone: Yup.number()
+						.max(12, 'Must be 12 characters or less')
+						.required('Required'),
+					email: Yup.string()
+						.email('Invalid email address')
+						.required('Required'),
+					message: Yup.string(),
 				})}
 				onSubmit={(values, { setSubmitting }) => {
 					setTimeout(() => {
