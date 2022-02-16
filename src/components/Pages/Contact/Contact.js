@@ -2,7 +2,8 @@ import React, { useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { HeroContainer, HeroContent, Div, Section } from './ContactElements';
-import ContactForm from './ContactForm/ContactForm';
+// import ContactForm from './ContactForm/ContactForm';
+import MyForm from './ContactForm/MyForm';
 
 const Contact = () => {
 	const controls = useAnimation();
@@ -160,7 +161,8 @@ const Contact = () => {
 				</Div>
 			</Section>
 			<Section>
-				<ContactForm id='form' />
+				{/* <ContactForm id='form' /> */}
+				<MyForm />
 			</Section>
 		</>
 	);
