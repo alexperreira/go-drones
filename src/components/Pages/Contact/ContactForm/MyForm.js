@@ -36,6 +36,9 @@ const TextInput = ({ label, ...props }) => {
 	);
 };
 
+const phoneRegExp =
+	/^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
+
 const MyForm = () => {
 	return (
 		<>
@@ -51,8 +54,8 @@ const MyForm = () => {
 						.max(25, 'Must be 25 characters or less')
 						.required('Required'),
 					// !Check to see if input needs to be string or number
-					phone: Yup.number()
-						.max(12, 'Must be 12 characters or less')
+					phone: Yup.string()
+						.matches(phoneRegExp, 'Phone number is not valid')
 						.required('Required'),
 					email: Yup.string()
 						.email('Invalid email address')
