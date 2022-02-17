@@ -1,5 +1,5 @@
-import React from 'react';
-import { Formik, Form, useField } from 'formik';
+import React, { useEffect } from 'react';
+import { Formik, Form, useField, Field } from 'formik';
 import * as Yup from 'yup';
 import styles from './ContactForm.module.css';
 import styled from 'styled-components';
@@ -43,39 +43,95 @@ const phoneRegExp =
 const ContactForm = () => {
 	let navigate = useNavigate();
 
+	const encode = (data) => {
+		return Object.keys(data)
+			.map(
+				(key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
+			)
+			.join('&');
+	};
+
+	const initialValues = {
+		// 'bot-field': '',
+		// 'form-name': 'contactForm',
+		name: '',
+		phone: '',
+		email: '',
+		message: '',
+	};
+
+	// const onSubmit = (values, { setSubmitting }) => {
+	// 	await new Promise((r) => setTimeout(r, 500)).then(
+	// 		alert("Thank you for your inquiry. You'll be hearing from us shortly!")
+	// 	);
+
+	// 	setSubmitting(false);
+	// 	navigate('/', { replace: true });
+	// };
+
+	const onSubmit = (values, submitProps) => {
+		fetch('/', {
+			method: 'POST',
+			headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+			body: encode({ 'form-name': 'contactForm', ...values }),
+		})
+			.then((response) => {
+				if (!response.ok) {
+					throw new Error(response.status);
+				} else if (response.ok) {
+					alert(
+						"Thank you for your inquiry. You'll be hearing from us shortly!"
+					);
+					submitProps.setSubmitting(false);
+				} else {
+					alert('Something went wrong!');
+				}
+
+				return response;
+			})
+			.catch((error) => alert(error));
+	};
+
+	const validationSchema = Yup.object({
+		name: Yup.string()
+			.max(25, 'Must be 25 characters or less')
+			.required('Required'),
+		// !Check to see if input needs to be string or number
+		phone: Yup.string()
+			.min(8, 'Phone number must be 8 digits. 1-555-3333')
+			.matches(phoneRegExp, 'Phone number is not valid')
+			.required('Required'),
+		email: Yup.string().email('Invalid email address').required('Required'),
+		message: Yup.string(),
+	});
+
+	// useEffect(() => {
+	// 	const handleSubmit = async (formValues) => {
+	// 		const data = {
+	// 			...formValues,
+	// 		};
+	// 		const options = {
+	// 			method: 'POST',
+	// 			headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+	// 			data: qs.stringify(data),
+	// 			url: '/',
+	// 		};
+	// 		try {
+	// 			await axios(options);
+	// 			setMsgSent(true);
+	// 			formReset();
+	// 		} catch (e) {
+	// 			setErrMsg(e.message);
+	// 		}
+	// 	};
+	// });
+
 	return (
 		<>
 			<Formik
-				initialValues={{
-					name: '',
-					phone: '',
-					email: '',
-					message: '',
-				}}
-				validationSchema={Yup.object({
-					name: Yup.string()
-						.max(25, 'Must be 25 characters or less')
-						.required('Required'),
-					// !Check to see if input needs to be string or number
-					phone: Yup.string()
-						.min(8, 'Phone number must be 8 digits. 1-555-3333')
-						.matches(phoneRegExp, 'Phone number is not valid')
-						.required('Required'),
-					email: Yup.string()
-						.email('Invalid email address')
-						.required('Required'),
-					message: Yup.string(),
-				})}
-				onSubmit={async (values, { setSubmitting }) => {
-					await new Promise((r) => setTimeout(r, 500)).then(
-						alert(
-							"Thank you for your inquiry. You'll be hearing from us shortly!"
-						)
-					);
-
-					setSubmitting(false);
-					navigate('/', { replace: true });
-				}}
+				initialValues={initialValues}
+				validationSchema={validationSchema}
+				onSubmit={onSubmit}
 			>
 				<Form
 					className={styles.contactForm}
@@ -83,8 +139,11 @@ const ContactForm = () => {
 					method='POST'
 					data-netlify='
 				true'
+					data-netlify-honeypot='bot-field'
 					action='/'
 				>
+					<Field type='hidden' name='bot-field' />
+					<Field type='hidden' name='form-name' />
 					<TextGroup>
 						<EqualDiv>
 							<TextInput

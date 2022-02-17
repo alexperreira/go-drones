@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.02c4804f.css",
-    "main.js": "/static/js/main.a23dbdf9.js",
+    "main.js": "/static/js/main.1c2c4e7b.js",
     "static/media/drone-reel.mp4": "/static/media/drone-reel.2002ccf977100405d2a4.mp4",
     "static/media/drone-process-reel.mp4": "/static/media/drone-process-reel.aab001805a28cdccb666.mp4",
     "static/media/gol-drones-hero.png": "/static/media/gol-drones-hero.815c7fcf69b0896cbdd6.png",
@@ -30,10 +30,10 @@
     "static/media/telephone-icon.png": "/static/media/telephone-icon.16387389c1607ebacfc7.png",
     "index.html": "/index.html",
     "main.02c4804f.css.map": "/static/css/main.02c4804f.css.map",
-    "main.a23dbdf9.js.map": "/static/js/main.a23dbdf9.js.map"
+    "main.1c2c4e7b.js.map": "/static/js/main.1c2c4e7b.js.map"
   },
   "entrypoints": [
     "static/css/main.02c4804f.css",
-    "static/js/main.a23dbdf9.js"
+    "static/js/main.1c2c4e7b.js"
   ]
 }
