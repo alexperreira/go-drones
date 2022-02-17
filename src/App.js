@@ -1,7 +1,7 @@
 // import dependencies
 import React, { useEffect } from 'react';
 import ReactGA from 'react-ga';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, useLocation } from 'react-router-dom';
 import './App.css';
 
 // import pages
@@ -15,16 +15,21 @@ import Sidebar from './components/Sidebar/Sidebar';
 import Footer from './components/UI/Footer/Footer';
 import ScrollToTop from './components/UI/ScrollToTop';
 
-function App() {
+function usePageViews() {
 	const TRACKING_ID = 'G-VGQSMQFFFS';
-
+	const location = useLocation();
 	useEffect(() => {
-		ReactGA.initialize(TRACKING_ID, {
-			testMode: true,
-		});
-		ReactGA.pageview('Init page view');
-	});
-	ReactGA.pageview(window.location.pathname);
+		if (!window.GA_INITIALIZED) {
+			ReactGA.initialize(TRACKING_ID);
+			window.GA_INITIALIZED = true;
+		}
+		ReactGA.set({ page: location.pathname });
+		ReactGA.pageview(location.pathname);
+	}, [location]);
+}
+
+function App() {
+	usePageViews();
 	return (
 		<div>
 			<Sidebar />

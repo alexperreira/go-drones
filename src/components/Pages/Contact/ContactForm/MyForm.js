@@ -72,7 +72,14 @@ const MyForm = () => {
 					}, 400);
 				}}
 			>
-				<Form className={styles.contactForm}>
+				<Form
+					className={styles.contactForm}
+					name='contactForm'
+					method='POST'
+					data-netlify='
+				true'
+					action='/'
+				>
 					<TextGroup>
 						<EqualDiv>
 							<TextInput
