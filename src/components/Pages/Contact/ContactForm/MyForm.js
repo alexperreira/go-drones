@@ -3,6 +3,7 @@ import { Formik, Form, useField } from 'formik';
 import * as Yup from 'yup';
 import styles from './MyForm.module.css';
 import styled from 'styled-components';
+import { useNavigate } from 'react-router-dom';
 
 const TextGroup = styled.div`
 	width: 100%;
@@ -40,6 +41,8 @@ const phoneRegExp =
 	/^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
 
 const MyForm = () => {
+	let navigate = useNavigate();
+
 	return (
 		<>
 			<Formik
@@ -63,13 +66,15 @@ const MyForm = () => {
 						.required('Required'),
 					message: Yup.string(),
 				})}
-				onSubmit={(values, { setSubmitting }) => {
-					setTimeout(() => {
+				onSubmit={async (values, { setSubmitting }) => {
+					await new Promise((r) => setTimeout(r, 500)).then(
 						alert(
 							"Thank you for your inquiry. You'll be hearing from us shortly!"
-						);
-						setSubmitting(false);
-					}, 400);
+						)
+					);
+
+					setSubmitting(false);
+					navigate('/', { replace: true });
 				}}
 			>
 				<Form
