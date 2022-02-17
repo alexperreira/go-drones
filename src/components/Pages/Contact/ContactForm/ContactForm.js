@@ -60,15 +60,6 @@ const ContactForm = () => {
 		message: '',
 	};
 
-	// const onSubmit = (values, { setSubmitting }) => {
-	// 	await new Promise((r) => setTimeout(r, 500)).then(
-	// 		alert("Thank you for your inquiry. You'll be hearing from us shortly!")
-	// 	);
-
-	// 	setSubmitting(false);
-	// 	navigate('/', { replace: true });
-	// };
-
 	const onSubmit = (values, submitProps) => {
 		fetch('/', {
 			method: 'POST',
@@ -105,27 +96,6 @@ const ContactForm = () => {
 		email: Yup.string().email('Invalid email address').required('Required'),
 		message: Yup.string(),
 	});
-
-	// useEffect(() => {
-	// 	const handleSubmit = async (formValues) => {
-	// 		const data = {
-	// 			...formValues,
-	// 		};
-	// 		const options = {
-	// 			method: 'POST',
-	// 			headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-	// 			data: qs.stringify(data),
-	// 			url: '/',
-	// 		};
-	// 		try {
-	// 			await axios(options);
-	// 			setMsgSent(true);
-	// 			formReset();
-	// 		} catch (e) {
-	// 			setErrMsg(e.message);
-	// 		}
-	// 	};
-	// });
 
 	return (
 		<>
