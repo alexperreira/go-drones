@@ -4,6 +4,7 @@ import { useInView } from 'react-intersection-observer';
 import { HeroContainer, HeroContent, Div, Section } from './ContactElements';
 // import ContactForm from './ContactForm/ContactForm';
 import MyForm from './ContactForm/MyForm';
+// import SemanticForm from './ContactForm/SemanticForm';
 
 const Contact = () => {
 	const controls = useAnimation();
@@ -163,6 +164,7 @@ const Contact = () => {
 			<Section>
 				{/* <ContactForm id='form' /> */}
 				<MyForm />
+				{/* <SemanticForm /> */}
 			</Section>
 		</>
 	);

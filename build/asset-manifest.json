@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.9d46f25c.css",
-    "main.js": "/static/js/main.c6c97e6c.js",
+    "main.css": "/static/css/main.0e1bd5f7.css",
+    "main.js": "/static/js/main.8f9c4b42.js",
     "static/media/drone-reel.mp4": "/static/media/drone-reel.2002ccf977100405d2a4.mp4",
     "static/media/drone-process-reel.mp4": "/static/media/drone-process-reel.aab001805a28cdccb666.mp4",
     "static/media/gol-drones-hero.png": "/static/media/gol-drones-hero.815c7fcf69b0896cbdd6.png",
@@ -29,11 +29,11 @@
     "static/media/gologo.png": "/static/media/gologo.940927ab5b95a572ff36.png",
     "static/media/telephone-icon.png": "/static/media/telephone-icon.16387389c1607ebacfc7.png",
     "index.html": "/index.html",
-    "main.9d46f25c.css.map": "/static/css/main.9d46f25c.css.map",
-    "main.c6c97e6c.js.map": "/static/js/main.c6c97e6c.js.map"
+    "main.0e1bd5f7.css.map": "/static/css/main.0e1bd5f7.css.map",
+    "main.8f9c4b42.js.map": "/static/js/main.8f9c4b42.js.map"
   },
   "entrypoints": [
-    "static/css/main.9d46f25c.css",
-    "static/js/main.c6c97e6c.js"
+    "static/css/main.0e1bd5f7.css",
+    "static/js/main.8f9c4b42.js"
   ]
 }

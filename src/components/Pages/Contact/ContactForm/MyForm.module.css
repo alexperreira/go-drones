@@ -11,6 +11,10 @@
 	overflow: hidden;
 }
 
+label {
+	color: #808080;
+}
+
 .textArea {
 	height: 4rem;
 }
