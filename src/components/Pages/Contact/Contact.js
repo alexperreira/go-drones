@@ -2,9 +2,7 @@ import React, { useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { HeroContainer, HeroContent, Div, Section } from './ContactElements';
-// import ContactForm from './ContactForm/ContactForm';
-import MyForm from './ContactForm/MyForm';
-// import SemanticForm from './ContactForm/SemanticForm';
+import ContactForm from './ContactForm/ContactForm';
 
 const Contact = () => {
 	const controls = useAnimation();
@@ -162,9 +160,7 @@ const Contact = () => {
 				</Div>
 			</Section>
 			<Section>
-				{/* <ContactForm id='form' /> */}
-				<MyForm />
-				{/* <SemanticForm /> */}
+				<ContactForm />
 			</Section>
 		</>
 	);
