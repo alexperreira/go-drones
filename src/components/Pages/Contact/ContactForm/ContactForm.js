@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Formik, Form, useField, Field } from 'formik';
 import * as Yup from 'yup';
 import styles from './ContactForm.module.css';
@@ -83,6 +83,7 @@ const ContactForm = () => {
 						"Thank you for your inquiry. You'll be hearing from us shortly!"
 					);
 					submitProps.setSubmitting(false);
+					navigate('/', { replace: true });
 				} else {
 					alert('Something went wrong!');
 				}
