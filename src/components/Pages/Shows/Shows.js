@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import ReactPlayer from 'react-player';
+// import ReactPlayer from 'react-player';
 import Modal from './Modal';
 import {
 	Hero,
@@ -20,6 +20,7 @@ import EDCTwo from '../../assets/images/gol-drones-hero.png';
 
 import TwinOne from '../../assets/images/process-section1-bg.png';
 import TwinTwo from '../../assets/images/twinfalls-thumbnail.png';
+import YouTubePlayer from 'react-player/youtube';
 
 const Shows = () => {
 	const [isOpenOne, setIsOpenOne] = useState(false);
@@ -79,15 +80,10 @@ const Shows = () => {
 					</Layout>
 				</Container>
 				<Modal open={isOpenOne} onClose={() => setIsOpenOne(false)}>
-					<ReactPlayer
-						style={{ overflow: 'hidden' }}
-						width='100%'
-						height='100%'
-						url='https://www.youtube.com/watch?v=lAfRNeHMZNU'
-					/>
+					<YouTubePlayer url='https://www.youtube.com/watch?v=lAfRNeHMZNU' />
 				</Modal>
 				<Modal open={isOpenTwo} onClose={() => setIsOpenTwo(false)}>
-					<ReactPlayer url='https://www.youtube.com/watch?v=g4jVz6m0oVw' />
+					<YouTubePlayer url='https://www.youtube.com/watch?v=g4jVz6m0oVw' />
 				</Modal>
 			</SectionTwo>
 		</>

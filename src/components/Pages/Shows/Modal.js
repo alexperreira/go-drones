@@ -30,8 +30,8 @@ const ModalContainer = styled.div`
 	position: fixed;
 	top: 20vh;
 	left: 0;
-	width: 100%;
-	// height: 100%;
+	width: 1280px;
+	height: 720px;
 	align-self: center;
 	padding: 1rem;
 	// border-radius: 14px;
@@ -39,7 +39,7 @@ const ModalContainer = styled.div`
 	z-index: 100;
 	animation: ${animation} 300ms ease-out forwards;
 	overflow: hidden;
-	scrollbar: hidden;
+	border-box: content;-box;
 
 	@media (min-width: 768px) {
 		width: 40rem;
@@ -51,15 +51,11 @@ const Wrapper = styled.div`
 	position: relative;
 	// padding-top: 56.25%;
 	padding-top: calc(720 / 1280 * 100%);
-	overflow: hidden;
 	width: 100%;
 	height: 100%;
-	scrollbar: hidden;
-
-	::-webkit-scrollbar {
-		display: none;
-		width: 0px;
-	}
+	overflow: hidden;
+	object-fit: contain;
+	-o-object-fit: contain;
 `;
 
 const Position = styled.div`
@@ -69,12 +65,7 @@ const Position = styled.div`
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
-	scrollbar: hidden;
-
-	::-webkit-scrollbar {
-		display: none;
-		width: 0px;
-	}
+	o-object-fit: contain;
 `;
 
 const CloseButton = styled(IoCloseOutline)`
@@ -91,10 +82,10 @@ const Modal = ({ open, children, onClose }) => {
 
 	return ReactDOM.createPortal(
 		<>
-			<Backdrop />
-			<ModalContainer>
-				<Wrapper>
-					<Position>
+			<Backdrop onClick={onClose} />
+			<ModalContainer className='container'>
+				<Wrapper className='wrapper'>
+					<Position className='position'>
 						<CloseButton onClick={onClose} />
 						{children}
 					</Position>

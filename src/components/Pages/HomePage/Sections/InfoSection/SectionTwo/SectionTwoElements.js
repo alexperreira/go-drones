@@ -38,6 +38,7 @@ export const BgOverlay = styled.div`
 export const TextGroup = styled.div`
 	align-self: center;
 	width: 1000px;
+	overflow: hidden;
 
 	h1 {
 		color: #fff;

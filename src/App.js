@@ -1,5 +1,6 @@
 // import dependencies
 import React from 'react';
+import ReactGA from 'react-ga';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 
@@ -15,6 +16,12 @@ import Footer from './components/UI/Footer/Footer';
 import ScrollToTop from './components/UI/ScrollToTop';
 
 function App() {
+	const TRACKING_ID = 'G-VGQSMQFFFS';
+	ReactGA.initialize(TRACKING_ID, {
+		standardImplementation: true,
+		testMode: true,
+	});
+	ReactGA.pageview(window.location.pathname);
 	return (
 		<div>
 			<Sidebar />

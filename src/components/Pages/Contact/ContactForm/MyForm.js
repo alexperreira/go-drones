@@ -55,6 +55,7 @@ const MyForm = () => {
 						.required('Required'),
 					// !Check to see if input needs to be string or number
 					phone: Yup.string()
+						.min(8, 'Phone number must be 8 digits. 1-555-3333')
 						.matches(phoneRegExp, 'Phone number is not valid')
 						.required('Required'),
 					email: Yup.string()
